@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Trainer</title>
+    <style>
+        :root {
+            --primary-green: #006400;
+            --table-green: #0b7235;
+            --button-green: #0c913c;
+            --info-bg: rgba(11, 114, 53, 0.9);
+            --button-hover: #0e6e31;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .poker-table {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            background-color: var(--table-green);
+            border-radius: 200px;
+            border: 20px solid #6b4226;
+            margin: 0 auto 20px;
+            overflow: hidden;
+        }
+
+        .table-felt {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border-radius: 180px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dealer-button {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            right: 28%;
+            bottom: 15%;
+            z-index: 20;
+        }
+
+        .blinds {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            z-index: 20;
+        }
+
+        .small-blind {
+            background-color: #9370db;
+            left: 28%;
+            bottom: 15%;
+        }
+
+        .big-blind {
+            background-color: #ffa500;
+            left: 35%;
+            bottom: 15%;
+        }
+
+        .board-area {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 5px;
+        }
+
+        .pot-info {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--info-bg);
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .player {
+            position: absolute;
+            background-color: var(--info-bg);
+            padding: 10px;
+            border-radius: 5px;
+            width: 150px;
+            text-align: center;
+        }
+
+        .player-top {
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .player-right {
+            top: 35%;
+            right: 5%;
+        }
+
+        .player-bottom {
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .player-left {
+            top: 35%;
+            left: 5%;
+        }
+
+        .player img {
+            width: 60px;
+            height: 80px;
+            border-radius: 5px;
+        }
+
+        .player-cards {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .player-info {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .card {
+            width: 60px;
+            height: 85px;
+            background-color: white;
+            border-radius: 5px;
+            position: relative;
+            color: black;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-red {
+            color: red;
+        }
+
+        .card-value {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 18px;
+        }
+
+        .card-suit {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            font-size: 18px;
+        }
+
+        .card-center-suit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+        }
+
+        .hero-area {
+            position: absolute;
+            bottom: 5%;
+            left: 30%;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-info {
+            background-color: var(--info-bg);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .action-button {
+            padding: 15px 30px;
+            border-radius: 40px;
+            border: none;
+            background-color: var(--button-green);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .action-button:hover {
+            background-color: var(--button-hover);
+        }
+
+        .settings-panel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .settings-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .settings-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .select-option {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            background-color: #444;
+            border: none;
+            color: white;
+        }
+
+        .player-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+
+        .result-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 100;
+            font-size: 24px;
+            min-width: 300px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .result-correct {
+            color: #4CAF50;
+        }
+
+        .result-wrong {
+            color: #F44336;
+        }
+
+        .timer-display {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .poker-table {
+                height: 60vh;
+                border-radius: 100px;
+                border-width: 15px;
+            }
+
+            .table-felt {
+                border-radius: 80px;
+            }
+
+            .player {
+                width: 120px;
+            }
+
+            .card {
+                width: 50px;
+                height: 70px;
+            }
+
+            .action-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .poker-table {
+                height: 50vh;
+                border-radius: 80px;
+                border-width: 10px;
+            }
+
+            .table-felt {
+                border-radius: 60px;
+            }
+
+            .player {
+                width: 100px;
+                padding: 5px;
+            }
+
+            .card {
+                width: 40px;
+                height: 56px;
+            }
+
+            .action-button {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <div class="score-display">
+                Score: <span id="score">0</span>/<span id="total-scenes">0</span>
+            </div>
+            <div class="timer-display">
+                Time: <span id="timer">60</span>s
+            </div>
+            <div>
+                <button id="pause-btn" class="action-button">Pause</button>
+                <button id="practice-errors-btn" class="action-button hidden">Practice Errors</button>
+            </div>
+        </div>
+
+        <div class="poker-table">
+            <div class="table-felt"></div>
+
+            <!-- Board cards -->
+            <div class="board-area" id="board-area">
+                <!-- Cards will be added dynamically -->
+            </div>
+
+            <!-- Pot information -->
+            <div class="pot-info">
+                <div>BB <span id="bb-amount">800</span></div>
+                <div>Pot: <span id="pot-amount">9,600</span></div>
+                <div>To Call: <span id="to-call">0</span></div>
+            </div>
+
+            <!-- Dealer button and blinds -->
+            <div class="dealer-button">DEALER</div>
+            <div class="blinds small-blind">SB</div>
+            <div class="blinds big-blind">BB</div>
+
+            <!-- Players will be added dynamically -->
+            <div class="players-container" id="players-container">
+                <!-- Example player (top) -->
+                <div class="player player-top">
+                    <div>Type TA</div>
+                    <div>Stack: 45,600</div>
+                    <img src="player.jpg" alt="player avatar" class="player-avatar">
+                </div>
+
+                <!-- Example player (right) -->
+                <div class="player player-right">
+                    <div>Type LP</div>
+                    <div>Stack: 17,600</div>
+                    <img src="player.jpg" alt="player avatar" class="player-avatar">
+                </div>
+            </div>
+
+            <!-- Hero area -->
+            <div class="hero-area">
+                <div class="hero-info">
+                    <div>Stack: <span id="hero-stack">17,600</span></div>
+                    <div>Prior: <span id="hero-commit">2,400</span></div>
+                </div>
+                <div class="player-cards" id="hero-cards">
+                    <!-- Hero cards will be added dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="action-buttons">
+            <button class="action-button" data-action="check">Check</button>
+            <button class="action-button" data-action="3bb">3 BB</button>
+            <button class="action-button" data-action="halfpot">1/2 Pot</button>
+            <button class="action-button" data-action="doublepot">2x Pot</button>
+            <button class="action-button" data-action="5bb">5 BB</button>
+            <button class="action-button" data-action="pot">Pot</button>
+            <button class="action-button" data-action="shove">Shove</button>
+        </div>
+
+        <!-- Result message (hidden by default) -->
+        <div id="result-message" class="result-message hidden">
+            <!-- Result message will go here -->
+        </div>
+
+        <div class="settings-panel">
+            <div class="settings-group">
+                <div class="settings-title">Card Style</div>
+                <select id="card-style" class="select-option">
+                    <option value="two-color">Two Color (Red/Black)</option>
+                    <option value="four-color">Four Color (Red/Blue/Black/Green)</option>
+                </select>
+            </div>
+            <div class="settings-group">
+                <div class="settings-title">Timer Duration</div>
+                <select id="timer-duration" class="select-option">
+                    <option value="90">90 seconds</option>
+                    <option value="60" selected>60 seconds</option>
+                    <option value="30">30 seconds</option>
+                    <option value="15">15 seconds</option>
+                </select>
+            </div>
+            <div class="settings-group">
+                <div class="settings-title">Scenario Pack</div>
+                <select id="scenario-pack" class="select-option">
+                    <option value="default">Default Pack</option>
+                    <!-- Additional packs would be added here -->
+                </select>
+            </div>
+            <div class="settings-group">
+                <div class="settings-title">Card Deck</div>
+                <select id="card-deck" class="select-option">
+                    <option value="standard">Standard Deck</option>
+                    <!-- Additional decks would be added here -->
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Constants for card representation
+        const CARD_SUITS = {
+            's': { symbol: '♠', name: 'spades', color: 'black' },
+            'h': { symbol: '♥', name: 'hearts', color: 'red' },
+            'd': { symbol: '♦', name: 'diamonds', color: 'red' },
+            'c': { symbol: '♣', name: 'clubs', color: 'black' }
+        };
+
+        const FOUR_COLOR_SUITS = {
+            's': { symbol: '♠', name: 'spades', color: 'black' },
+            'h': { symbol: '♥', name: 'hearts', color: 'red' },
+            'd': { symbol: '♦', name: 'diamonds', color: 'blue' },
+            'c': { symbol: '♣', name: 'clubs', color: 'green' }
+        };
+
+        const CARD_VALUES = {
+            'A': 'A', 'K': 'K', 'Q': 'Q', 'J': 'J', 'T': '10',
+            '9': '9', '8': '8', '7': '7', '6': '6', '5': '5', 
+            '4': '4', '3': '3', '2': '2'
+        };
+
+        // Global state
+        let scenarioData = null;
+        let currentSceneIndex = 0;
+        let timerInterval = null;
+        let timeRemaining = 60;
+        let gameIsPaused = false;
+        let score = 0;
+        let errorScenes = [];
+        let isErrorMode = false;
+        let fourColorMode = false;
+
+        // DOM Elements
+        const boardArea = document.getElementById('board-area');
+        const playersContainer = document.getElementById('players-container');
+        const heroCardsArea = document.getElementById('hero-cards');
+        const potAmountElement = document.getElementById('pot-amount');
+        const bbAmountElement = document.getElementById('bb-amount');
+        const toCallElement = document.getElementById('to-call');
+        const heroStackElement = document.getElementById('hero-stack');
+        const heroCommitElement = document.getElementById('hero-commit');
+        const timerElement = document.getElementById('timer');
+        const scoreElement = document.getElementById('score');
+        const totalScenesElement = document.getElementById('total-scenes');
+        const resultMessageElement = document.getElementById('result-message');
+        const pauseButton = document.getElementById('pause-btn');
+        const practiceErrorsButton = document.getElementById('practice-errors-btn');
+        const actionButtons = document.querySelectorAll('.action-button');
+        const cardStyleSelect = document.getElementById('card-style');
+        const timerDurationSelect = document.getElementById('timer-duration');
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', initApp);
+
+        function initApp() {
+            // Load scenario data and set up event listeners
+            loadScenarioData();
+            setupEventListeners();
+
+            // Set up initial UI
+            displaySampleScene();
+        }
+
+        function setupEventListeners() {
+            // Card style selection
+            cardStyleSelect.addEventListener('change', function() {
+                fourColorMode = this.value === 'four-color';
+                displayCurrentScene();
+            });
+
+            // Timer duration selection
+            timerDurationSelect.addEventListener('change', function() {
+                timeRemaining = parseInt(this.value);
+                timerElement.textContent = timeRemaining;
+                if (!gameIsPaused) {
+                    startTimer();
+                }
+            });
+
+            // Pause button
+            pauseButton.addEventListener('click', togglePause);
+
+            // Practice errors button
+            practiceErrorsButton.addEventListener('click', startErrorMode);
+
+            // Action buttons
+            actionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const action = this.getAttribute('data-action');
+                    handleAction(action);
+                });
+            });
+        }
+
+        function loadScenarioData() {
+            // In a production environment, this would fetch from a server
+            // For now, we'll use a predefined dataset
+            
+            // Sample data hardcoded based on the first scenario
+            scenarioData = {
+                scenarioScenes: [
+                    {
+                        "answer": "check",
+                        "bigBlind": 800,
+                        "button": 7,
+                        "duration": 60,
+                        "heroAmount": 0,
+                        "heroCommit": 2400,
+                        "heroStack": 17600,
+                        "sceneHoleCards": {
+                            "HoleCard1": "9h",
+                            "HoleCard2": "10d"
+                        },
+                        "originalPot": 9600,
+                        "pot": 9600,
+                        "toGo": 0,
+                        "street": "turn",
+                        "numVillains": 2,
+                        "villains": [
+                            {
+                                "action": "",
+                                "amount": 0,
+                                "position": 2,
+                                "villainStack": 45600,
+                                "playerType": "TA"
+                            },
+                            {
+                                "action": "",
+                                "amount": 0,
+                                "position": 5,
+                                "villainStack": 17600,
+                                "playerType": "LP"
+                            }
+                        ],
+                        "hand": {
+                            "handBoard": {
+                                "flop 1": "Ks",
+                                "flop 2": "Ks",
+                                "flop 3": "10h",
+                                "turn": "9h",
+                                "river": ""
+                            },
+                            "holeCards": {
+                                "HoleCard1": "9h",
+                                "HoleCard2": "10d"
+                            }
+                        },
+                        "answerAmount": 0
+                    }
+                    // Additional scenes would be loaded here
+                ]
+            };
+            
+            totalScenesElement.textContent = scenarioData.scenarioScenes.length;
+        }
+
+        function displaySampleScene() {
+            // Create and display the sample scene to match the provided screenshot
+            
+            // Clear existing content
+            boardArea.innerHTML = '';
+            heroCardsArea.innerHTML = '';
+            
+            // Display hero's cards (9h, 10d as in the screenshot)
+            createCard('9h', heroCardsArea);
+            createCard('10d', heroCardsArea);
+            
+            // Display board cards (Ks, Ks, 10h as in the screenshot)
+            createCard('Ks', boardArea);
+            createCard('Ks', boardArea);
+            createCard('10h', boardArea);
+            
+            // Set pot and BB information
+            potAmountElement.textContent = '9,600';
+            bbAmountElement.textContent = '800';
+            toCallElement.textContent = '0';
+            
+            // Set hero information
+            heroStackElement.textContent = '17,600';
+            heroCommitElement.textContent = '2,400';
+        }
+
+        function createCard(cardCode, container) {
+            if (!cardCode) return;
+            
+            const card = document.createElement('div');
+            card.className = 'card';
+            
+            const value = cardCode.replace(/10/i, 'T').slice(0, -1);
+            const suit = cardCode.slice(-1).toLowerCase();
+            
+            const cardValue = document.createElement('div');
+            cardValue.className = 'card-value';
+            cardValue.textContent = CARD_VALUES[value] || value;
+            
+            const cardSuit = document.createElement('div');
+            cardSuit.className = 'card-suit';
+            
+            const cardCenterSuit = document.createElement('div');
+            cardCenterSuit.className = 'card-center-suit';
+            
+            let suitData;
+            if (fourColorMode) {
+                suitData = FOUR_COLOR_SUITS[suit];
+            } else {
+                suitData = CARD_SUITS[suit];
+            }
+            
+            if (suitData) {
+                card.classList.add(`card-${suitData.color}`);
+                cardSuit.textContent = suitData.symbol;
+                cardCenterSuit.textContent = suitData.symbol;
+            }
+            
+            card.appendChild(cardValue);
+            card.appendChild(cardSuit);
+            card.appendChild(cardCenterSuit);
+            
+            container.appendChild(card);
+            return card;
+        }
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            timerElement.textContent = timeRemaining;
+            
+            timerInterval = setInterval(() => {
+                if (!gameIsPaused) {
+                    timeRemaining--;
+                    timerElement.textContent = timeRemaining;
+                    
+                    if (timeRemaining <= 0) {
+                        clearInterval(timerInterval);
+                        handleTimeout();
+                    }
+                }
+            }, 1000);
+        }
+
+        function togglePause() {
+            gameIsPaused = !gameIsPaused;
+            pauseButton.textContent = gameIsPaused ? 'Resume' : 'Pause';
+        }
+
+        function startErrorMode() {
+            if (errorScenes.length > 0) {
+                isErrorMode = true;
+                currentSceneIndex = 0;
+                practiceErrorsButton.classList.add('hidden');
+                displayCurrentScene();
+                showResult('Practice Error Scenes Mode', true);
+            } else {
+                showResult('No error scenes to practice!', false);
+            }
+        }
+
+        function handleAction(action) {
+            const currentScene = getCurrentScene();
+            let isCorrect = action === currentScene.answer;
+            
+            // Special handling for bet/raise with amount
+            if ((action === 'bet' || action === 'raise' || action === 'call') && 
+                currentScene.answerAmount > 0) {
+                // In a real app, we would check the amount here
+            }
+            
+            // Update score
+            if (isCorrect) {
+                score++;
+                scoreElement.textContent = score;
+                showResult('Correct!', true);
+            } else {
+                if (!isErrorMode) {
+                    errorScenes.push(currentSceneIndex);
+                }
+                showResult(`Incorrect! The correct answer was ${currentScene.answer}.`, false);
+            }
+            
+            // Move to next scene
+            setTimeout(() => {
+                nextScene();
+            }, 2000);
+        }
+
+        function handleTimeout() {
+            showResult('Time's up!', false);
+            setTimeout(() => {
+                nextScene();
+            }, 2000);
+        }
+
+        function showResult(message, isCorrect) {
+            resultMessageElement.textContent = message;
+            resultMessageElement.className = 'result-message';
+            
+            if (isCorrect) {
+                resultMessageElement.classList.add('result-correct');
+            } else {
+                resultMessageElement.classList.add('result-wrong');
+            }
+            
+            resultMessageElement.classList.remove('hidden');
+            
+            // Hide the message after a few seconds
+            setTimeout(() => {
+                resultMessageElement.classList.add('hidden');
+            }, 3000);
+        }
+
+        function getCurrentScene() {
+            if (!scenarioData || !scenarioData.scenarioScenes.length) {
+                return null;
+            }
+            
+            if (isErrorMode) {
+                return scenarioData.scenarioScenes[errorScenes[currentSceneIndex]];
+            }
+            
+            return scenarioData.scenarioScenes[currentSceneIndex];
+        }
+
+        function displayCurrentScene() {
+            const scene = getCurrentScene();
+            if (!scene) return;
+            
+            // This would update the UI with the current scene data
+            // For now, we'll just keep the sample scene displayed
+        }
+
+        function nextScene() {
+            currentSceneIndex++;
+            
+            const maxScenes = isErrorMode ? 
+                errorScenes.length : 
+                (scenarioData ? scenarioData.scenarioScenes.length : 0);
+            
+            if (currentSceneIndex >= maxScenes) {
+                currentSceneIndex = 0;
+                
+                if (isErrorMode) {
+                    isErrorMode = false;
+                    practiceErrorsButton.classList.remove('hidden');
+                    showResult('Completed all error scenes!', true);
+                } else if (maxScenes > 0 && currentSceneIndex % 50 === 0) {
+                    togglePause();
+                    showResult('Taking a break after 50 scenes', true);
+                }
+            }
+            
+            displayCurrentScene();
+            startTimer();
+        }
+    </script>
+</body>
+</html>
