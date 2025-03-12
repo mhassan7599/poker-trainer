@@ -1,0 +1,602 @@
+        :root {
+            --primary-green: #006400;
+            --table-green: #0b7235;
+            --button-green: #0c913c;
+            --info-bg: rgba(11, 114, 53, 0.9);
+            --button-hover: #0e6e31;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .poker-table {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            background-color: var(--table-green);
+            border-radius: 200px;
+            border: 20px solid #6b4226;
+            margin: 0 auto 20px;
+            overflow: hidden;
+        }
+
+        .table-felt {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border-radius: 180px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dealer-button {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            right: 28%;
+            bottom: 15%;
+            z-index: 20;
+        }
+
+        .blinds {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            z-index: 20;
+        }
+
+        .small-blind {
+            background-color: #9370db;
+            left: 28%;
+            bottom: 15%;
+        }
+
+        .big-blind {
+            background-color: #ffa500;
+            left: 35%;
+            bottom: 15%;
+        }
+
+        .board-area {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .pot-info {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--info-bg);
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .player {
+            position: absolute;
+            background-color: var(--info-bg);
+            padding: 10px;
+            border-radius: 5px;
+            width: 150px;
+            text-align: center;
+        }
+
+        .player-top {
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .player-right {
+            top: 35%;
+            right: 5%;
+        }
+
+        .player-bottom {
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .player-left {
+            top: 35%;
+            left: 5%;
+        }
+
+        .player-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            object-fit: contain;
+            margin-bottom: 5px;
+            padding-top: 10px;
+        }
+
+        .player-cards {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 60px;
+            height: 85px;
+            background-color: white;
+            border-radius: 5px;
+            position: relative;
+            color: black;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-red {
+            color: red;
+        }
+
+        .card-blue {
+            color: blue;
+        }
+
+        .card-green {
+            color: green;
+        }
+
+        .card-value {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 18px;
+        }
+
+        .card-suit {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            font-size: 18px;
+        }
+
+        .card-center-suit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+        }
+
+        .hero-area {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-info {
+            background-color: var(--info-bg);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .action-button {
+            padding: 15px 30px;
+            border-radius: 40px;
+            border: none;
+            background-color: var(--button-green);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            min-width: 100px;
+        }
+
+        .action-button:hover {
+            background-color: var(--button-hover);
+        }
+
+        .settings-panel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .settings-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .settings-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .select-option {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            background-color: #444;
+            border: none;
+            color: white;
+        }
+
+        .result-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 100;
+            font-size: 24px;
+            min-width: 300px;
+            max-width: 90%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .result-correct {
+            color: #4CAF50;
+        }
+
+        .result-wrong {
+            color: #F44336;
+        }
+
+        .timer-display {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Better Media Queries for Responsive Design */
+        /* Tablet */
+        @media (max-width: 1024px) {
+            .poker-table {
+                height: 60vh;
+                border-radius: 150px;
+                border-width: 18px;
+            }
+            
+            .table-felt {
+                border-radius: 125px;
+            }
+            
+            .player {
+                width: 130px;
+            }
+            
+            .player-avatar {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .pot-info {
+                width: 180px;
+            }
+            
+            .action-button {
+                padding: 12px 24px;
+                font-size: 15px;
+            }
+            
+            .card {
+                width: 55px;
+                height: 77px;
+            }
+            
+            .card-center-suit {
+                font-size: 28px;
+            }
+        }
+
+        /* Large Phones */
+        @media (max-width: 768px) {
+            .poker-table {
+                height: 55vh;
+                border-radius: 120px;
+                border-width: 15px;
+            }
+            
+            .table-felt {
+                border-radius: 100px;
+            }
+
+            .player-right {
+                top: 49%;
+            }
+
+            .dealer-button {
+                right: 20%;
+            }
+
+            .small-blind {
+                left: 9%;
+            }
+            
+            .big-blind {
+                left: 20%;
+            }
+
+            .player {
+                width: 120px;
+                padding: 8px;
+            }
+            
+            .player-avatar {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .card {
+                width: 50px;
+                height: 70px;
+            }
+            
+            .card-value {
+                font-size: 16px;
+            }
+            
+            .card-suit {
+                font-size: 16px;
+            }
+            
+            .card-center-suit {
+                font-size: 24px;
+            }
+            
+            .action-button {
+                padding: 10px 20px;
+                font-size: 14px;
+                min-width: 90px;
+            }
+            
+            .dealer-button, .blinds {
+                width: 40px;
+                height: 40px;
+                font-size: 10px;
+            }
+            
+            .game-header {
+                justify-content: center;
+            }
+            
+            .settings-group {
+                min-width: 160px;
+            }
+        }
+
+        /* Small Phones */
+        @media (max-width: 480px) {
+            .poker-table {
+                height: 50vh;
+                border-radius: 90px;
+                border-width: 10px;
+            }
+            
+            .table-felt {
+                border-radius: 75px;
+                top: 15px;
+                left: 15px;
+                right: 15px;
+                bottom: 15px;
+            }
+            
+            .player {
+                width: 100px;
+                padding: 5px;
+                font-size: 12px;
+            }
+            
+            .player-avatar {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 3px;
+            }
+            
+            .card {
+                width: 40px;
+                height: 56px;
+            }
+            
+            .card-value {
+                font-size: 14px;
+            }
+            
+            .card-suit {
+                font-size: 14px;
+            }
+            
+            .card-center-suit {
+                font-size: 20px;
+            }
+            
+            .action-button {
+                padding: 8px 15px;
+                font-size: 12px;
+                min-width: 80px;
+                margin-bottom: 5px;
+            }
+            
+            .dealer-button, .blinds {
+                width: 35px;
+                height: 35px;
+                font-size: 9px;
+            }
+            
+            .pot-info {
+                width: 150px;
+                font-size: 12px;
+                padding: 7px;
+            }
+            
+            .game-header {
+                padding: 7px;
+                font-size: 12px;
+            }
+            
+            .timer-display {
+                font-size: 14px;
+            }
+            
+            .hero-info {
+                font-size: 12px;
+                padding: 7px;
+            }
+            
+            .settings-panel {
+                padding: 10px;
+                gap: 10px;
+            }
+            
+            .settings-group {
+                min-width: 100%;
+            }
+            
+            .settings-title {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+            
+            .select-option {
+                padding: 6px;
+                font-size: 12px;
+            }
+            
+            .result-message {
+                font-size: 18px;
+                padding: 15px;
+                min-width: 250px;
+            }
+        }
+        
+        /* Very Small Phones */
+        @media (max-width: 360px) {
+            .poker-table {
+                height: 45vh;
+                border-radius: 70px;
+                border-width: 8px;
+            }
+            
+            .table-felt {
+                border-radius: 60px;
+            }
+            
+            .card {
+                width: 35px;
+                height: 49px;
+            }
+            
+            .card-value {
+                font-size: 12px;
+            }
+            
+            .card-suit {
+                font-size: 12px;
+            }
+            
+            .card-center-suit {
+                font-size: 18px;
+            }
+            
+            .action-button {
+                padding: 6px 12px;
+                font-size: 11px;
+                min-width: 70px;
+            }
+            
+            .dealer-button, .blinds {
+                width: 30px;
+                height: 30px;
+                font-size: 8px;
+            }
+            
+            .player {
+                width: 90px;
+                font-size: 11px;
+            }
+            
+            .player-avatar {
+                width: 45px;
+                height: 45px;
+            }
+        }
