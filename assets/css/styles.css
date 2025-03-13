@@ -124,7 +124,7 @@ body {
 
 .board-area {
   position: absolute;
-  top: 50%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -156,7 +156,7 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
   border-radius: 10px;
-  width: 150px;
+  width: 128px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -164,7 +164,7 @@ body {
 }
 
 .player-top {
-  top: 10%;
+  top: 2%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -226,32 +226,36 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Two-color scheme */
-.two-color .card-hearts,
-.two-color .card-diamonds {
-  color: #e53935; /* Red */
+.card-condition-hearts {
+  color: #ff0000;
 }
 
-.two-color .card-spades,
-.two-color .card-clubs {
-  color: #000000; /* Black */
+.card-condition-hearts div {
+  color: #ff0000;
 }
 
-/* Four-color scheme */
+/* Four-color scheme with exact colors */
 .four-color .card-hearts {
-  color: #e53935; /* Red */
+  color: #ff0000; /* Pure Red */
 }
 
 .four-color .card-diamonds {
-  color: #1e88e5; /* Blue */
+  color: #0000ff; /* Pure Blue */
 }
 
 .four-color .card-spades {
-  color: #000000; /* Black */
+  color: #000000; /* Pure Black */
 }
 
 .four-color .card-clubs {
-  color: #43a047; /* Green */
+  color: #008000; /* Pure Green */
+}
+
+/* Make the colors more vibrant */
+.four-color .card-value,
+.four-color .card-suit,
+.four-color .card-center-suit {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .card-value {
@@ -508,7 +512,7 @@ body {
   }
 
   .card-value {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .card-suit {
@@ -586,8 +590,8 @@ body {
   }
 
   .card {
-    width: 45px;
-    height: 63px;
+    width: 65px;
+    height: 65px;
   }
 
   .card-value {
@@ -676,8 +680,8 @@ body {
   }
 
   .card {
-    width: 35px;
-    height: 49px;
+    width: 55px;
+    height: 55px;
   }
 
   .card-value {
@@ -693,7 +697,7 @@ body {
   }
 
   .card-center-suit {
-    font-size: 18px;
+    font-size: 18px !important;
   }
 
   .dealer-button, .blinds {
@@ -789,7 +793,7 @@ body {
 @media (max-height: 600px) and (orientation: landscape) {
   .poker-table {
     height: 75vh;
-    max-height: 400px;
+    max-height: 600px;
   }
   
   .settings-panel {
@@ -1158,4 +1162,79 @@ body {
         font-size: 18px;
         letter-spacing: 3px;
   }
+}
+
+/* 4-color toggle button */
+.color-toggle-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(to bottom, #3f51b5, #303f9f);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.color-toggle-btn:hover {
+  background: linear-gradient(to bottom, #303f9f, #1a237e);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.color-toggle-btn.active {
+  background: linear-gradient(to bottom, #43a047, #2e7d32);
+}
+
+.color-toggle-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Make sure cards are visible */
+.card-value, .card-suit, .card-center-suit {
+  position: absolute;
+  font-weight: bold;
+}
+
+.card-value {
+  top: 5px;
+  left: 5px;
+  font-size: 18px;
+}
+
+.card-suit {
+  bottom: 5px;
+  right: 5px;
+  font-size: 18px;
+}
+
+.card-center-suit {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Card animation */
+@keyframes dealCard {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-animation {
+  animation: dealCard 0.3s ease-out forwards;
 }

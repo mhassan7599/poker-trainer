@@ -221,8 +221,8 @@ function adjustCardSizes(width) {
         cardWidth = 30;
         cardHeight = 42;
     } else if (width <= 480) {
-        cardWidth = 35;
-        cardHeight = 49;
+        cardWidth = 45;
+        cardHeight = 55;
     } else if (width <= 576) {
         cardWidth = 45;
         cardHeight = 63;
@@ -262,7 +262,7 @@ function adjustPlayerPositions(width, isPortrait) {
             }
         } else if (width <= 480) {
             if (player.classList.contains('player-top')) {
-                player.style.top = '3%';
+                player.style.top = '0%';
             } else if (player.classList.contains('player-right')) {
                 player.style.right = '3%';
             } else if (player.classList.contains('player-left')) {
@@ -273,7 +273,7 @@ function adjustPlayerPositions(width, isPortrait) {
         // Special handling for portrait mode on mobile
         if (width <= 480 && isPortrait) {
             if (player.classList.contains('player-top')) {
-                player.style.top = '5%';
+                player.style.top = '0%';
             } else if (player.classList.contains('player-right')) {
                 player.style.right = '5%';
                 player.style.top = '40%';
@@ -360,6 +360,22 @@ document.addEventListener('DOMContentLoaded', function() {
             scenarioData = data;
             initializeGame(scenarioData);
         });
+    
+    // Initialize card style switcher
+    initCardStyleSwitcher();
+
+    const cardStyleSelect = document.getElementById('card-style');
+    const container = document.querySelector('.container');
+
+    cardStyleSelect.addEventListener('change', function(e) {
+        if (e.target.value === 'four-color') {
+            container.classList.add('four-color');
+            container.classList.remove('two-color');
+        } else {
+            container.classList.add('two-color');
+            container.classList.remove('four-color');
+        }
+    });
 });
 
 // Function to handle button actions and show detailed feedback page
@@ -713,8 +729,13 @@ function setupEventListeners() {
     });
     
     // Add event listener for card style changes
-    document.getElementById('card-style').addEventListener('change', function() {
-        updateCardStyle(this.value);
+    document.getElementById('card-style').addEventListener('change', function(e) {
+        const container = document.querySelector('.container');
+        if (e.target.value === 'four-color') {
+            container.classList.add('four-color');
+        } else {
+            container.classList.remove('four-color');
+        }
     });
     
     // Add event listener for timer duration changes
@@ -873,3 +894,127 @@ const sampleScenarioData = {
         }
     ]
 };
+
+// Function to initialize card style switcher
+function initCardStyleSwitcher() {
+    // Create the toggle button if it doesn't exist
+    if (!document.getElementById('color-toggle-btn')) {
+        const toggleBtn = document.createElement('button');
+        toggleBtn.id = 'color-toggle-btn';
+        toggleBtn.className = 'color-toggle-btn';
+        toggleBtn.textContent = '4 Color Toggle';
+        
+        // Add the button to a more visible location
+        const container = document.querySelector('.container');
+        const pokerTable = document.querySelector('.poker-table');
+        container.insertBefore(toggleBtn, pokerTable.nextSibling);
+        
+        // Add event listener for the toggle button
+        toggleBtn.addEventListener('click', toggleCardColors);
+    }
+    
+    // Initialize with two-color scheme by default
+    document.querySelector('.poker-table').classList.add('two-color');
+    
+    // Apply initial card styling
+    updateExistingCards();
+}
+
+// Function to toggle between two-color and four-color schemes
+function toggleCardColors() {
+    const pokerTable = document.querySelector('.poker-table');
+    const toggleBtn = document.getElementById('color-toggle-btn');
+    
+    if (pokerTable.classList.contains('two-color')) {
+        // Switch to four-color
+        pokerTable.classList.remove('two-color');
+        pokerTable.classList.add('four-color');
+        toggleBtn.classList.add('active');
+        toggleBtn.textContent = '2 Color Toggle';
+
+        const cardStyleSelect = document.getElementById('card-style');
+        if (cardStyleSelect) {
+            cardStyleSelect.value = 'four-color';
+        }
+    } else {
+        // Switch to two-color
+        pokerTable.classList.remove('four-color');
+        pokerTable.classList.add('two-color');
+        toggleBtn.classList.remove('active');
+        toggleBtn.textContent = '4 Color Toggle';
+
+        const cardStyleSelect = document.getElementById('card-style');
+        if (cardStyleSelect) {
+            cardStyleSelect.value = 'two-color';
+        }
+    }
+    
+    // Update all existing cards
+    updateExistingCards();
+}
+
+// Function to update existing cards with proper suit classes
+function updateExistingCards() {
+    // Get all cards
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+        // Get the suit from the card
+        const suitElement = card.querySelector('.card-suit');
+        if (!suitElement) return;
+        
+        const suit = suitElement.textContent.trim();
+        
+        // Remove existing suit classes
+        card.classList.remove('card-hearts', 'card-diamonds', 'card-spades', 'card-clubs');
+        
+        // Add appropriate suit class
+        if (suit === '♥') {
+            card.classList.add('card-hearts');
+        } else if (suit === '♦') {
+            card.classList.add('card-diamonds');
+        } else if (suit === '♠') {
+            card.classList.add('card-spades');
+        } else if (suit === '♣') {
+            card.classList.add('card-clubs');
+        }
+    });
+}
+
+// Enhanced function to create cards with proper suit classes
+function createCard(cardInfo, container, delay = 0) {
+    if (!cardInfo) return;
+    
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.animationDelay = `${delay * 0.1}s`;
+    card.classList.add('card-animation');
+    
+    // Extract value and suit
+    const value = cardInfo.slice(0, -1);
+    const suit = cardInfo.slice(-1);
+    
+    // Add suit-specific class
+    if (suit === '♥') {
+        card.classList.add('card-hearts');
+    } else if (suit === '♦') {
+        card.classList.add('card-diamonds');
+    } else if (suit === '♠') {
+        card.classList.add('card-spades');
+    } else if (suit === '♣') {
+        card.classList.add('card-clubs');
+    }
+    
+    card.innerHTML = `
+        <div class="card-value">${value}</div>
+        <div class="card-suit">${suit}</div>
+        <div class="card-center-suit">${suit}</div>
+    `;
+    
+    container.appendChild(card);
+    
+    // Apply responsive sizing
+    adjustCardSizes(window.innerWidth);
+    
+    return card;
+}
