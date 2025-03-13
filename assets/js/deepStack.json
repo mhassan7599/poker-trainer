@@ -1,0 +1,3198 @@
+{
+  "scenarioScenes": [
+    {
+      "answer": "check",
+      "bigBlind": 100,
+      "button": 5,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 900,
+      "heroStack": 32200,
+      "sceneHoleCards": {
+        "HoleCard1": "Ts",
+        "HoleCard2": "Th"
+      },
+      "originalPot": 2400,
+      "pot": 2400,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "check",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 21100,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 5,
+      "connectText": "over pair, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "8h",
+          "flop 2": "6d",
+          "flop 3": "4c",
+          "turn": "3c",
+          "river": "Qh"
+        },
+        "holeCards": {
+          "HoleCard1": "Ts",
+          "HoleCard2": "Th"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "check",
+      "bigBlind": 100,
+      "button": 8,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 1000,
+      "heroStack": 35100,
+      "sceneHoleCards": {
+        "HoleCard1": "Th",
+        "HoleCard2": "Kc"
+      },
+      "originalPot": 2400,
+      "pot": 2400,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 21300,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 8,
+      "connectText": "large draw, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Qh",
+          "flop 2": "5d",
+          "flop 3": "Js",
+          "turn": "Qd",
+          "river": "Kd"
+        },
+        "holeCards": {
+          "HoleCard1": "Th",
+          "HoleCard2": "Kc"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "check",
+      "bigBlind": 100,
+      "button": 8,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 1100,
+      "heroStack": 35700,
+      "sceneHoleCards": {
+        "HoleCard1": "Kh",
+        "HoleCard2": "8c"
+      },
+      "originalPot": 5200,
+      "pot": 5200,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 3,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 6200,
+          "playerType": "TA"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 28900,
+          "playerType": "TP"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 40000,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Ad",
+          "flop 2": "5s",
+          "flop 3": "Kd",
+          "turn": "6h",
+          "river": "Ac"
+        },
+        "holeCards": {
+          "HoleCard1": "Kh",
+          "HoleCard2": "8c"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 100,
+      "button": 1,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 400,
+      "heroStack": 31400,
+      "sceneHoleCards": {
+        "HoleCard1": "Ah",
+        "HoleCard2": "Td"
+      },
+      "originalPot": 1000,
+      "pot": 1200,
+      "toGo": 200,
+      "street": "flop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 200,
+          "position": 3,
+          "villainStack": 35900,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 1,
+      "boardConnect": 12,
+      "connectText": "one over card, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Kh",
+          "flop 2": "6d",
+          "flop 3": "Qc",
+          "turn": "3s",
+          "river": "9c"
+        },
+        "holeCards": {
+          "HoleCard1": "Ah",
+          "HoleCard2": "Td"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 200,
+      "button": 2,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 4000,
+      "heroStack": 43600,
+      "sceneHoleCards": {
+        "HoleCard1": "Th",
+        "HoleCard2": "9c"
+      },
+      "originalPot": 12000,
+      "pot": 14400,
+      "toGo": 2400,
+      "street": "river",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 2400,
+          "position": 6,
+          "villainStack": 70200,
+          "playerType": "LA"
+        },
+        {
+          "action": "fold",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 72400,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 3,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "9d",
+          "flop 2": "Qh",
+          "flop 3": "7d",
+          "turn": "Qs",
+          "river": "Td"
+        },
+        "holeCards": {
+          "HoleCard1": "Th",
+          "HoleCard2": "9c"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 200,
+      "button": 6,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 80200,
+      "sceneHoleCards": {
+        "HoleCard1": "Th",
+        "HoleCard2": "9c"
+      },
+      "originalPot": 800,
+      "pot": 800,
+      "toGo": 200,
+      "street": "preflop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 60600,
+          "playerType": "TA"
+        }
+      ],
+      "answerAmount": 0
+    },
+    {
+      "answer": "check",
+      "bigBlind": 200,
+      "button": 6,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 1800,
+      "heroStack": 88200,
+      "sceneHoleCards": {
+        "HoleCard1": "Kh",
+        "HoleCard2": "Kd"
+      },
+      "originalPot": 4800,
+      "pot": 4800,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 49000,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 8,
+      "connectText": "large draw, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Ah",
+          "flop 2": "6h",
+          "flop 3": "7s",
+          "turn": "5h",
+          "river": "2h"
+        },
+        "holeCards": {
+          "HoleCard1": "Kh",
+          "HoleCard2": "Kd"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "check",
+      "bigBlind": 200,
+      "button": 9,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 800,
+      "heroStack": 79800,
+      "sceneHoleCards": {
+        "HoleCard1": "As",
+        "HoleCard2": "Td"
+      },
+      "originalPot": 2000,
+      "pot": 2000,
+      "toGo": 0,
+      "street": "flop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 41600,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "2h",
+          "flop 2": "8s",
+          "flop 3": "Ac",
+          "turn": "Kd",
+          "river": "Jd"
+        },
+        "holeCards": {
+          "HoleCard1": "As",
+          "HoleCard2": "Td"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 200,
+      "button": 2,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 4000,
+      "heroStack": 79400,
+      "sceneHoleCards": {
+        "HoleCard1": "9d",
+        "HoleCard2": "Kd"
+      },
+      "originalPot": 11400,
+      "pot": 34200,
+      "toGo": 11400,
+      "street": "river",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 11400,
+          "position": 3,
+          "villainStack": 8200,
+          "playerType": "Maniac"
+        },
+        {
+          "action": "call",
+          "amount": 11400,
+          "position": 6,
+          "villainStack": 21000,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 3,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Qc",
+          "flop 2": "Ks",
+          "flop 3": "Ah",
+          "turn": "Ac",
+          "river": "8d"
+        },
+        "holeCards": {
+          "HoleCard1": "9d",
+          "HoleCard2": "Kd"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 300,
+      "button": 3,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 75600,
+      "sceneHoleCards": {
+        "HoleCard1": "Ks",
+        "HoleCard2": "5h"
+      },
+      "originalPot": 2100,
+      "pot": 2520,
+      "toGo": 720,
+      "street": "preflop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "raise",
+          "amount": 420,
+          "position": 6,
+          "villainStack": 53580,
+          "playerType": "TP"
+        }
+      ],
+      "answerAmount": 0
+    },
+    {
+      "answer": "call",
+      "bigBlind": 300,
+      "button": 3,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 134100,
+      "sceneHoleCards": {
+        "HoleCard1": "Th",
+        "HoleCard2": "Ad"
+      },
+      "originalPot": 2100,
+      "pot": 2625,
+      "toGo": 825,
+      "street": "preflop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 149100,
+          "playerType": "TA"
+        },
+        {
+          "action": "raise",
+          "amount": 525,
+          "position": 6,
+          "villainStack": 31575,
+          "playerType": "LA"
+        }
+      ],
+      "answerAmount": 825
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 300,
+      "button": 5,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 2700,
+      "heroStack": 83100,
+      "sceneHoleCards": {
+        "HoleCard1": "6c",
+        "HoleCard2": "Kc"
+      },
+      "originalPot": 7800,
+      "pot": 9750,
+      "toGo": 1950,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 1950,
+          "position": 8,
+          "villainStack": 99450,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 8,
+      "connectText": "large draw, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "7s",
+          "flop 2": "5d",
+          "flop 3": "4h",
+          "turn": "5c",
+          "river": "3c"
+        },
+        "holeCards": {
+          "HoleCard1": "6c",
+          "HoleCard2": "Kc"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 300,
+      "button": 7,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 132900,
+      "sceneHoleCards": {
+        "HoleCard1": "Jh",
+        "HoleCard2": "Kc"
+      },
+      "originalPot": 900,
+      "pot": 900,
+      "toGo": 300,
+      "street": "preflop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 56100,
+          "playerType": "TA"
+        }
+      ],
+      "answerAmount": 900
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 300,
+      "button": 4,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 91500,
+      "sceneHoleCards": {
+        "HoleCard1": "Js",
+        "HoleCard2": "Td"
+      },
+      "originalPot": 2100,
+      "pot": 2100,
+      "toGo": 300,
+      "street": "preflop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 87900,
+          "playerType": "TA"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 81300,
+          "playerType": "Maniac"
+        }
+      ],
+      "answerAmount": 900
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 300,
+      "button": 5,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 3000,
+      "heroStack": 116700,
+      "sceneHoleCards": {
+        "HoleCard1": "9h",
+        "HoleCard2": "Tc"
+      },
+      "originalPot": 14400,
+      "pot": 28800,
+      "toGo": 14400,
+      "street": "turn",
+      "numVillains": 3,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 14400,
+          "position": 6,
+          "villainStack": 58200,
+          "playerType": "Maniac"
+        },
+        {
+          "action": "fold",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 67800,
+          "playerType": "TP"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 61800,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 7,
+      "connectText": "large draw, one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "4h",
+          "flop 2": "5h",
+          "flop 3": "7s",
+          "turn": "Th",
+          "river": "6h"
+        },
+        "holeCards": {
+          "HoleCard1": "9h",
+          "HoleCard2": "Tc"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 300,
+      "button": 1,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 128400,
+      "sceneHoleCards": {
+        "HoleCard1": "As",
+        "HoleCard2": "Ah"
+      },
+      "originalPot": 900,
+      "pot": 1200,
+      "toGo": 300,
+      "street": "preflop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "call",
+          "amount": 300,
+          "position": 8,
+          "villainStack": 56700,
+          "playerType": "LA"
+        }
+      ],
+      "answerAmount": 1500
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 300,
+      "button": 4,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 1200,
+      "heroStack": 26700,
+      "sceneHoleCards": {
+        "HoleCard1": "As",
+        "HoleCard2": "Jc"
+      },
+      "originalPot": 2700,
+      "pot": 2700,
+      "toGo": 0,
+      "street": "flop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 42300,
+          "playerType": "TA"
+        },
+        {
+          "action": "check",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 59700,
+          "playerType": "TP"
+        }
+      ],
+      "rank": 5,
+      "boardConnect": 2,
+      "connectText": "two card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Tc",
+          "flop 2": "Kc",
+          "flop 3": "Qs",
+          "turn": "Ad",
+          "river": "5c"
+        },
+        "holeCards": {
+          "HoleCard1": "As",
+          "HoleCard2": "Jc"
+        }
+      },
+      "answerAmount": 1350
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 300,
+      "button": 9,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 150,
+      "heroStack": 75000,
+      "sceneHoleCards": {
+        "HoleCard1": "7s",
+        "HoleCard2": "Ac"
+      },
+      "originalPot": 1800,
+      "pot": 2400,
+      "toGo": 300,
+      "street": "preflop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "call",
+          "amount": 300,
+          "position": 6,
+          "villainStack": 121200,
+          "playerType": "TA"
+        },
+        {
+          "action": "call",
+          "amount": 300,
+          "position": 8,
+          "villainStack": 82800,
+          "playerType": "LA"
+        }
+      ],
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 300,
+      "button": 8,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 5400,
+      "heroStack": 82500,
+      "sceneHoleCards": {
+        "HoleCard1": "Ah",
+        "HoleCard2": "Tc"
+      },
+      "originalPot": 19800,
+      "pot": 19800,
+      "toGo": 0,
+      "street": "river",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 76200,
+          "playerType": "Maniac"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 44400,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 3,
+      "boardConnect": 6,
+      "connectText": "one card board connection with over card",
+      "hand": {
+        "handBoard": {
+          "flop 1": "3d",
+          "flop 2": "Th",
+          "flop 3": "5h",
+          "turn": "2c",
+          "river": "5s"
+        },
+        "holeCards": {
+          "HoleCard1": "Ah",
+          "HoleCard2": "Tc"
+        }
+      },
+      "answerAmount": 9900
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 400,
+      "button": 3,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 7600,
+      "heroStack": 94400,
+      "sceneHoleCards": {
+        "HoleCard1": "8d",
+        "HoleCard2": "Kc"
+      },
+      "originalPot": 17600,
+      "pot": 17600,
+      "toGo": 0,
+      "street": "river",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "check",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 145200,
+          "playerType": "Maniac"
+        }
+      ],
+      "rank": 7,
+      "boardConnect": 2,
+      "connectText": "two card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Ks",
+          "flop 2": "5d",
+          "flop 3": "9c",
+          "turn": "8h",
+          "river": "8c"
+        },
+        "holeCards": {
+          "HoleCard1": "8d",
+          "HoleCard2": "Kc"
+        }
+      },
+      "answerAmount": 8800
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 400,
+      "button": 6,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 133600,
+      "sceneHoleCards": {
+        "HoleCard1": "As",
+        "HoleCard2": "Ac"
+      },
+      "originalPot": 2000,
+      "pot": 2000,
+      "toGo": 400,
+      "street": "preflop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 137200,
+          "playerType": "TP"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 100400,
+          "playerType": "TA"
+        }
+      ],
+      "answerAmount": 1200
+    },
+    {
+      "answer": "check",
+      "bigBlind": 400,
+      "button": 3,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 6800,
+      "heroStack": 106800,
+      "sceneHoleCards": {
+        "HoleCard1": "Qd",
+        "HoleCard2": "Kd"
+      },
+      "originalPot": 14400,
+      "pot": 14400,
+      "toGo": 0,
+      "street": "river",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "check",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 143200,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 3,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "2h",
+          "flop 2": "Qh",
+          "flop 3": "Ad",
+          "turn": "5h",
+          "river": "5s"
+        },
+        "holeCards": {
+          "HoleCard1": "Qd",
+          "HoleCard2": "Kd"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 400,
+      "button": 2,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 106000,
+      "sceneHoleCards": {
+        "HoleCard1": "8d",
+        "HoleCard2": "9c"
+      },
+      "originalPot": 2400,
+      "pot": 4200,
+      "toGo": 1800,
+      "street": "preflop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "call",
+          "amount": 400,
+          "position": 6,
+          "villainStack": 78000,
+          "playerType": "TA"
+        },
+        {
+          "action": "raise",
+          "amount": 1400,
+          "position": 8,
+          "villainStack": 61400,
+          "playerType": "TA"
+        }
+      ],
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 400,
+      "button": 7,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 1200,
+      "heroStack": 99200,
+      "sceneHoleCards": {
+        "HoleCard1": "Qs",
+        "HoleCard2": "Td"
+      },
+      "originalPot": 3600,
+      "pot": 5400,
+      "toGo": 1800,
+      "street": "flop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 1800,
+          "position": 8,
+          "villainStack": 133400,
+          "playerType": "LA"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 141600,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 1,
+      "boardConnect": 13,
+      "connectText": "small draw, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Kd",
+          "flop 2": "As",
+          "flop 3": "9h",
+          "turn": "2h",
+          "river": "4h"
+        },
+        "holeCards": {
+          "HoleCard1": "Qs",
+          "HoleCard2": "Td"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 500,
+      "button": 5,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 22000,
+      "sceneHoleCards": {
+        "HoleCard1": "As",
+        "HoleCard2": "Th"
+      },
+      "originalPot": 1500,
+      "pot": 1500,
+      "toGo": 500,
+      "street": "preflop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 36000,
+          "playerType": "TA"
+        }
+      ],
+      "answerAmount": 1500
+    },
+    {
+      "answer": "check",
+      "bigBlind": 500,
+      "button": 6,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 2000,
+      "heroStack": 32000,
+      "sceneHoleCards": {
+        "HoleCard1": "Qs",
+        "HoleCard2": "Ks"
+      },
+      "originalPot": 3000,
+      "pot": 3000,
+      "toGo": 0,
+      "street": "flop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 5000,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 1,
+      "boardConnect": 10,
+      "connectText": "two over cards, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "5d",
+          "flop 2": "2c",
+          "flop 3": "8h",
+          "turn": "Jc",
+          "river": "7s"
+        },
+        "holeCards": {
+          "HoleCard1": "Qs",
+          "HoleCard2": "Ks"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 500,
+      "button": 6,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 4500,
+      "heroStack": 25000,
+      "sceneHoleCards": {
+        "HoleCard1": "Ts",
+        "HoleCard2": "Qs"
+      },
+      "originalPot": 19500,
+      "pot": 26000,
+      "toGo": 6500,
+      "street": "turn",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 6500,
+          "position": 8,
+          "villainStack": 25000,
+          "playerType": "TA"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 22500,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 3,
+      "boardConnect": 6,
+      "connectText": "one card board connection with over card",
+      "hand": {
+        "handBoard": {
+          "flop 1": "9s",
+          "flop 2": "4h",
+          "flop 3": "Td",
+          "turn": "9c",
+          "river": "2d"
+        },
+        "holeCards": {
+          "HoleCard1": "Ts",
+          "HoleCard2": "Qs"
+        }
+      },
+      "answerAmount": 13000
+    },
+    {
+      "answer": "check",
+      "bigBlind": 500,
+      "button": 3,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 10500,
+      "heroStack": 27500,
+      "sceneHoleCards": {
+        "HoleCard1": "Qs",
+        "HoleCard2": "Ks"
+      },
+      "originalPot": 18000,
+      "pot": 18000,
+      "toGo": 0,
+      "street": "river",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 39000,
+          "playerType": "TP"
+        }
+      ],
+      "rank": 3,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "4d",
+          "flop 2": "Kd",
+          "flop 3": "3s",
+          "turn": "4h",
+          "river": "As"
+        },
+        "holeCards": {
+          "HoleCard1": "Qs",
+          "HoleCard2": "Ks"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "check",
+      "bigBlind": 500,
+      "button": 9,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 1500,
+      "heroStack": 26000,
+      "sceneHoleCards": {
+        "HoleCard1": "Js",
+        "HoleCard2": "Th"
+      },
+      "originalPot": 5000,
+      "pot": 5000,
+      "toGo": 0,
+      "street": "flop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 17500,
+          "playerType": "TP"
+        }
+      ],
+      "rank": 1,
+      "boardConnect": 8,
+      "connectText": "large draw, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "3s",
+          "flop 2": "As",
+          "flop 3": "Ks",
+          "turn": "7d",
+          "river": "9d"
+        },
+        "holeCards": {
+          "HoleCard1": "Js",
+          "HoleCard2": "Th"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 600,
+      "button": 7,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 28800,
+      "sceneHoleCards": {
+        "HoleCard1": "3c",
+        "HoleCard2": "Ac"
+      },
+      "originalPot": 2400,
+      "pot": 2400,
+      "toGo": 600,
+      "street": "preflop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 52200,
+          "playerType": "TA"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 50400,
+          "playerType": "LA"
+        }
+      ],
+      "answerAmount": 1800
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 600,
+      "button": 9,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 300,
+      "heroStack": 21600,
+      "sceneHoleCards": {
+        "HoleCard1": "Kh",
+        "HoleCard2": "Kd"
+      },
+      "originalPot": 1800,
+      "pot": 3000,
+      "toGo": 600,
+      "street": "preflop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "call",
+          "amount": 600,
+          "position": 6,
+          "villainStack": 59400,
+          "playerType": "LA"
+        },
+        {
+          "action": "call",
+          "amount": 600,
+          "position": 8,
+          "villainStack": 67800,
+          "playerType": "TP"
+        }
+      ],
+      "answerAmount": 1800
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 600,
+      "button": 7,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 12600,
+      "heroStack": 27600,
+      "sceneHoleCards": {
+        "HoleCard1": "Js",
+        "HoleCard2": "Ad"
+      },
+      "originalPot": 25200,
+      "pot": 31500,
+      "toGo": 6300,
+      "street": "river",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 6300,
+          "position": 8,
+          "villainStack": 71100,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 4,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "8d",
+          "flop 2": "Ac",
+          "flop 3": "7s",
+          "turn": "As",
+          "river": "5d"
+        },
+        "holeCards": {
+          "HoleCard1": "Js",
+          "HoleCard2": "Ad"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 600,
+      "button": 1,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 5400,
+      "heroStack": 24600,
+      "sceneHoleCards": {
+        "HoleCard1": "Qc",
+        "HoleCard2": "Ac"
+      },
+      "originalPot": 26400,
+      "pot": 31680,
+      "toGo": 5280,
+      "street": "turn",
+      "numVillains": 3,
+      "villains": [
+        {
+          "action": "check",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 27000,
+          "playerType": "TP"
+        },
+        {
+          "action": "bet",
+          "amount": 5280,
+          "position": 6,
+          "villainStack": 13320,
+          "playerType": "LA"
+        },
+        {
+          "action": "fold",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 25200,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 8,
+      "connectText": "large draw, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "3c",
+          "flop 2": "Tc",
+          "flop 3": "8d",
+          "turn": "3h",
+          "river": "Qs"
+        },
+        "holeCards": {
+          "HoleCard1": "Qc",
+          "HoleCard2": "Ac"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 600,
+      "button": 7,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 32400,
+      "sceneHoleCards": {
+        "HoleCard1": "Ah",
+        "HoleCard2": "Td"
+      },
+      "originalPot": 1800,
+      "pot": 1800,
+      "toGo": 600,
+      "street": "preflop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 30600,
+          "playerType": "TP"
+        }
+      ],
+      "answerAmount": 1800
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 800,
+      "button": 8,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 7200,
+      "heroStack": 38400,
+      "sceneHoleCards": {
+        "HoleCard1": "Ah",
+        "HoleCard2": "6d"
+      },
+      "originalPot": 17600,
+      "pot": 17600,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 84000,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 3,
+      "boardConnect": 2,
+      "connectText": "two card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Ad",
+          "flop 2": "Ks",
+          "flop 3": "4h",
+          "turn": "6h",
+          "river": "Qc"
+        },
+        "holeCards": {
+          "HoleCard1": "Ah",
+          "HoleCard2": "6d"
+        }
+      },
+      "answerAmount": 8800
+    },
+    {
+      "answer": "check",
+      "bigBlind": 800,
+      "button": 7,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 3200,
+      "heroStack": 44000,
+      "sceneHoleCards": {
+        "HoleCard1": "As",
+        "HoleCard2": "9h"
+      },
+      "originalPot": 7200,
+      "pot": 7200,
+      "toGo": 0,
+      "street": "flop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 100800,
+          "playerType": "LA"
+        },
+        {
+          "action": "check",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 55200,
+          "playerType": "TP"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "8d",
+          "flop 2": "Ac",
+          "flop 3": "6h",
+          "turn": "Qd",
+          "river": "9d"
+        },
+        "holeCards": {
+          "HoleCard1": "As",
+          "HoleCard2": "9h"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "check",
+      "bigBlind": 800,
+      "button": 4,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 3200,
+      "heroStack": 30400,
+      "sceneHoleCards": {
+        "HoleCard1": "9h",
+        "HoleCard2": "Th"
+      },
+      "originalPot": 7200,
+      "pot": 7200,
+      "toGo": 0,
+      "street": "flop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 25600,
+          "playerType": "TA"
+        },
+        {
+          "action": "check",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 72800,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 10,
+      "connectText": "two over cards, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "4h",
+          "flop 2": "6d",
+          "flop 3": "4d",
+          "turn": "2s",
+          "river": "Js"
+        },
+        "holeCards": {
+          "HoleCard1": "9h",
+          "HoleCard2": "Th"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "call",
+      "bigBlind": 800,
+      "button": 2,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 8000,
+      "heroStack": 32000,
+      "sceneHoleCards": {
+        "HoleCard1": "Kd",
+        "HoleCard2": "Tc"
+      },
+      "originalPot": 20800,
+      "pot": 27733,
+      "toGo": 6933,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 6933,
+          "position": 8,
+          "villainStack": 32267,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Qd",
+          "flop 2": "8h",
+          "flop 3": "3s",
+          "turn": "Kc",
+          "river": "8c"
+        },
+        "holeCards": {
+          "HoleCard1": "Kd",
+          "HoleCard2": "Tc"
+        }
+      },
+      "answerAmount": 6933
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 800,
+      "button": 6,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 16800,
+      "heroStack": 48800,
+      "sceneHoleCards": {
+        "HoleCard1": "3c",
+        "HoleCard2": "Ac"
+      },
+      "originalPot": 33600,
+      "pot": 33600,
+      "toGo": 0,
+      "street": "river",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 23200,
+          "playerType": "TP"
+        }
+      ],
+      "rank": 6,
+      "boardConnect": 2,
+      "connectText": "two card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "2c",
+          "flop 2": "6s",
+          "flop 3": "Js",
+          "turn": "6c",
+          "river": "9c"
+        },
+        "holeCards": {
+          "HoleCard1": "3c",
+          "HoleCard2": "Ac"
+        }
+      },
+      "answerAmount": 16800
+    },
+    {
+      "answer": "check",
+      "bigBlind": 1000,
+      "button": 8,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 9000,
+      "heroStack": 45000,
+      "sceneHoleCards": {
+        "HoleCard1": "As",
+        "HoleCard2": "Qc"
+      },
+      "originalPot": 26000,
+      "pot": 26000,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 49000,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "5c",
+          "flop 2": "Ad",
+          "flop 3": "4d",
+          "turn": "Ts",
+          "river": "9d"
+        },
+        "holeCards": {
+          "HoleCard1": "As",
+          "HoleCard2": "Qc"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "call",
+      "bigBlind": 1000,
+      "button": 2,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 40000,
+      "sceneHoleCards": {
+        "HoleCard1": "Qd",
+        "HoleCard2": "Ac"
+      },
+      "originalPot": 6000,
+      "pot": 7500,
+      "toGo": 2500,
+      "street": "preflop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "raise",
+          "amount": 1500,
+          "position": 8,
+          "villainStack": 135500,
+          "playerType": "LA"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 90000,
+          "playerType": "LA"
+        }
+      ],
+      "answerAmount": 2500
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 1000,
+      "button": 5,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 40000,
+      "sceneHoleCards": {
+        "HoleCard1": "4h",
+        "HoleCard2": "4d"
+      },
+      "originalPot": 6000,
+      "pot": 7000,
+      "toGo": 1000,
+      "street": "preflop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 15000,
+          "playerType": "TA"
+        },
+        {
+          "action": "call",
+          "amount": 1000,
+          "position": 8,
+          "villainStack": 87000,
+          "playerType": "TP"
+        }
+      ],
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 1000,
+      "button": 5,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 17000,
+      "heroStack": 22000,
+      "sceneHoleCards": {
+        "HoleCard1": "5c",
+        "HoleCard2": "Ac"
+      },
+      "originalPot": 40000,
+      "pot": 53333,
+      "toGo": 13333,
+      "street": "river",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 13333,
+          "position": 8,
+          "villainStack": 98667,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 3,
+      "boardConnect": 6,
+      "connectText": "one card board connection with over card",
+      "hand": {
+        "handBoard": {
+          "flop 1": "7d",
+          "flop 2": "9h",
+          "flop 3": "5s",
+          "turn": "9s",
+          "river": "6h"
+        },
+        "holeCards": {
+          "HoleCard1": "5c",
+          "HoleCard2": "Ac"
+        }
+      },
+      "answerAmount": 26666
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 1000,
+      "button": 1,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 18000,
+      "heroStack": 58000,
+      "sceneHoleCards": {
+        "HoleCard1": "Ts",
+        "HoleCard2": "9c"
+      },
+      "originalPot": 38000,
+      "pot": 47500,
+      "toGo": 9500,
+      "street": "river",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 9500,
+          "position": 3,
+          "villainStack": 39500,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 5,
+      "boardConnect": 2,
+      "connectText": "two card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "8s",
+          "flop 2": "5d",
+          "flop 3": "Kh",
+          "turn": "7h",
+          "river": "Js"
+        },
+        "holeCards": {
+          "HoleCard1": "Ts",
+          "HoleCard2": "9c"
+        }
+      },
+      "answerAmount": 23750
+    },
+    {
+      "answer": "call",
+      "bigBlind": 1200,
+      "button": 8,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 1200,
+      "heroStack": 79200,
+      "sceneHoleCards": {
+        "HoleCard1": "Qd",
+        "HoleCard2": "Qc"
+      },
+      "originalPot": 4800,
+      "pot": 6000,
+      "toGo": 2400,
+      "street": "preflop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "raise",
+          "amount": 1200,
+          "position": 8,
+          "villainStack": 84000,
+          "playerType": "TA"
+        }
+      ],
+      "answerAmount": 2400
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 1200,
+      "button": 3,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 2400,
+      "heroStack": 61200,
+      "sceneHoleCards": {
+        "HoleCard1": "Kd",
+        "HoleCard2": "Ac"
+      },
+      "originalPot": 12000,
+      "pot": 14400,
+      "toGo": 2400,
+      "street": "flop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 2400,
+          "position": 6,
+          "villainStack": 21600,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 10,
+      "connectText": "two over cards, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "8d",
+          "flop 2": "8s",
+          "flop 3": "9s",
+          "turn": "Kc",
+          "river": "5s"
+        },
+        "holeCards": {
+          "HoleCard1": "Kd",
+          "HoleCard2": "Ac"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 1200,
+      "button": 2,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 12000,
+      "heroStack": 61200,
+      "sceneHoleCards": {
+        "HoleCard1": "9s",
+        "HoleCard2": "Ah"
+      },
+      "originalPot": 43200,
+      "pot": 77760,
+      "toGo": 34560,
+      "street": "turn",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 8640,
+          "position": 3,
+          "villainStack": 39360,
+          "playerType": "TA"
+        },
+        {
+          "action": "raise",
+          "amount": 25920,
+          "position": 6,
+          "villainStack": 31680,
+          "playerType": "TP"
+        }
+      ],
+      "rank": 3,
+      "boardConnect": 6,
+      "connectText": "one card board connection with over card",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Ks",
+          "flop 2": "Ts",
+          "flop 3": "9c",
+          "turn": "Kh",
+          "river": "8s"
+        },
+        "holeCards": {
+          "HoleCard1": "9s",
+          "HoleCard2": "Ah"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 1200,
+      "button": 1,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 13200,
+      "heroStack": 87600,
+      "sceneHoleCards": {
+        "HoleCard1": "Qd",
+        "HoleCard2": "Qc"
+      },
+      "originalPot": 28800,
+      "pot": 43200,
+      "toGo": 14400,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 14400,
+          "position": 8,
+          "villainStack": 61200,
+          "playerType": "Maniac"
+        }
+      ],
+      "rank": 4,
+      "boardConnect": 2,
+      "connectText": "two card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Ah",
+          "flop 2": "Js",
+          "flop 3": "Kc",
+          "turn": "Qh",
+          "river": "Th"
+        },
+        "holeCards": {
+          "HoleCard1": "Qd",
+          "HoleCard2": "Qc"
+        }
+      },
+      "answerAmount": 21600
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 1200,
+      "button": 2,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 13200,
+      "heroStack": 67200,
+      "sceneHoleCards": {
+        "HoleCard1": "8s",
+        "HoleCard2": "8d"
+      },
+      "originalPot": 31200,
+      "pot": 31200,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "check",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 73200,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 4,
+      "boardConnect": 2,
+      "connectText": "two card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Qc",
+          "flop 2": "6d",
+          "flop 3": "8c",
+          "turn": "9d",
+          "river": "9h"
+        },
+        "holeCards": {
+          "HoleCard1": "8s",
+          "HoleCard2": "8d"
+        }
+      },
+      "answerAmount": 15600
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 1600,
+      "button": 5,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 17600,
+      "heroStack": 132800,
+      "sceneHoleCards": {
+        "HoleCard1": "Ad",
+        "HoleCard2": "9c"
+      },
+      "originalPot": 70400,
+      "pot": 132000,
+      "toGo": 61600,
+      "street": "turn",
+      "numVillains": 3,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 17600,
+          "position": 6,
+          "villainStack": 64000,
+          "playerType": "TA"
+        },
+        {
+          "action": "raise",
+          "amount": 44000,
+          "position": 8,
+          "villainStack": 21600,
+          "playerType": "LA"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 112000,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 4,
+      "boardConnect": 7,
+      "connectText": "large draw, one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Th",
+          "flop 2": "Jh",
+          "flop 3": "Ac",
+          "turn": "As",
+          "river": "8h"
+        },
+        "holeCards": {
+          "HoleCard1": "Ad",
+          "HoleCard2": "9c"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 1600,
+      "button": 9,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 800,
+      "heroStack": 49600,
+      "sceneHoleCards": {
+        "HoleCard1": "Js",
+        "HoleCard2": "Tc"
+      },
+      "originalPot": 4800,
+      "pot": 6400,
+      "toGo": 1600,
+      "street": "preflop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "call",
+          "amount": 1600,
+          "position": 8,
+          "villainStack": 68800,
+          "playerType": "TP"
+        }
+      ],
+      "answerAmount": 4800
+    },
+    {
+      "answer": "check",
+      "bigBlind": 1600,
+      "button": 5,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 27200,
+      "heroStack": 72000,
+      "sceneHoleCards": {
+        "HoleCard1": "Ts",
+        "HoleCard2": "Qd"
+      },
+      "originalPot": 105600,
+      "pot": 105600,
+      "toGo": 0,
+      "street": "river",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 22400,
+          "playerType": "Maniac"
+        },
+        {
+          "action": "check",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 107200,
+          "playerType": "TP"
+        }
+      ],
+      "rank": 3,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "9h",
+          "flop 2": "Qh",
+          "flop 3": "5h",
+          "turn": "9c",
+          "river": "6h"
+        },
+        "holeCards": {
+          "HoleCard1": "Ts",
+          "HoleCard2": "Qd"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 1600,
+      "button": 3,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 83200,
+      "sceneHoleCards": {
+        "HoleCard1": "7c",
+        "HoleCard2": "8c"
+      },
+      "originalPot": 11200,
+      "pot": 22400,
+      "toGo": 12800,
+      "street": "preflop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "raise",
+          "amount": 11200,
+          "position": 6,
+          "villainStack": 62400,
+          "playerType": "Maniac"
+        },
+        {
+          "action": "fold",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 132800,
+          "playerType": "TA"
+        }
+      ],
+      "answerAmount": 0
+    },
+    {
+      "answer": "check",
+      "bigBlind": 1600,
+      "button": 9,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 14400,
+      "heroStack": 102400,
+      "sceneHoleCards": {
+        "HoleCard1": "Ts",
+        "HoleCard2": "Kd"
+      },
+      "originalPot": 76800,
+      "pot": 76800,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 3,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 30400,
+          "playerType": "TA"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 57600,
+          "playerType": "TA"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 102400,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "As",
+          "flop 2": "Jh",
+          "flop 3": "8d",
+          "turn": "Kc",
+          "river": "9d"
+        },
+        "holeCards": {
+          "HoleCard1": "Ts",
+          "HoleCard2": "Kd"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 2000,
+      "button": 7,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 92000,
+      "sceneHoleCards": {
+        "HoleCard1": "9c",
+        "HoleCard2": "Jc"
+      },
+      "originalPot": 10000,
+      "pot": 10000,
+      "toGo": 2000,
+      "street": "preflop",
+      "numVillains": 3,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 62000,
+          "playerType": "LA"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 262000,
+          "playerType": "TA"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 56000,
+          "playerType": "LP"
+        }
+      ],
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 2000,
+      "button": 1,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 86000,
+      "sceneHoleCards": {
+        "HoleCard1": "Qs",
+        "HoleCard2": "9d"
+      },
+      "originalPot": 10000,
+      "pot": 12000,
+      "toGo": 2000,
+      "street": "preflop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "call",
+          "amount": 2000,
+          "position": 6,
+          "villainStack": 80000,
+          "playerType": "Maniac"
+        }
+      ],
+      "answerAmount": 0
+    },
+    {
+      "answer": "check",
+      "bigBlind": 2000,
+      "button": 8,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 22000,
+      "heroStack": 96000,
+      "sceneHoleCards": {
+        "HoleCard1": "7s",
+        "HoleCard2": "Kc"
+      },
+      "originalPot": 48000,
+      "pot": 48000,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 20000,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 3,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Kh",
+          "flop 2": "Td",
+          "flop 3": "Ah",
+          "turn": "As",
+          "river": "5c"
+        },
+        "holeCards": {
+          "HoleCard1": "7s",
+          "HoleCard2": "Kc"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 2000,
+      "button": 1,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 22000,
+      "heroStack": 138000,
+      "sceneHoleCards": {
+        "HoleCard1": "Kh",
+        "HoleCard2": "8c"
+      },
+      "originalPot": 104000,
+      "pot": 156000,
+      "toGo": 52000,
+      "street": "turn",
+      "numVillains": 3,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 52000,
+          "position": 6,
+          "villainStack": 56000,
+          "playerType": "TP"
+        },
+        {
+          "action": "fold",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 60000,
+          "playerType": "LA"
+        },
+        {
+          "action": "check",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 66000,
+          "playerType": "TP"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 6,
+      "connectText": "one card board connection with over card",
+      "hand": {
+        "handBoard": {
+          "flop 1": "6d",
+          "flop 2": "8d",
+          "flop 3": "7d",
+          "turn": "3d",
+          "river": "4d"
+        },
+        "holeCards": {
+          "HoleCard1": "Kh",
+          "HoleCard2": "8c"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 2000,
+      "button": 3,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 22000,
+      "heroStack": 60000,
+      "sceneHoleCards": {
+        "HoleCard1": "Td",
+        "HoleCard2": "Ad"
+      },
+      "originalPot": 52000,
+      "pot": 62400,
+      "toGo": 10400,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 10400,
+          "position": 8,
+          "villainStack": 229600,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 6,
+      "boardConnect": 2,
+      "connectText": "two card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "4d",
+          "flop 2": "8d",
+          "flop 3": "6d",
+          "turn": "Ts",
+          "river": "As"
+        },
+        "holeCards": {
+          "HoleCard1": "Td",
+          "HoleCard2": "Ad"
+        }
+      },
+      "answerAmount": 31200
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 2400,
+      "button": 7,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 9600,
+      "heroStack": 151200,
+      "sceneHoleCards": {
+        "HoleCard1": "Jd",
+        "HoleCard2": "Ad"
+      },
+      "originalPot": 28800,
+      "pot": 36000,
+      "toGo": 7200,
+      "street": "flop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 129600,
+          "playerType": "TA"
+        },
+        {
+          "action": "bet",
+          "amount": 7200,
+          "position": 8,
+          "villainStack": 48000,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 1,
+      "boardConnect": 10,
+      "connectText": "two over cards, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Tc",
+          "flop 2": "4h",
+          "flop 3": "7h",
+          "turn": "2s",
+          "river": "3h"
+        },
+        "holeCards": {
+          "HoleCard1": "Jd",
+          "HoleCard2": "Ad"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 2400,
+      "button": 2,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 177600,
+      "sceneHoleCards": {
+        "HoleCard1": "2h",
+        "HoleCard2": "Ad"
+      },
+      "originalPot": 9600,
+      "pot": 12000,
+      "toGo": 2400,
+      "street": "preflop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "call",
+          "amount": 2400,
+          "position": 8,
+          "villainStack": 187200,
+          "playerType": "LA"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 45600,
+          "playerType": "TA"
+        }
+      ],
+      "answerAmount": 0
+    },
+    {
+      "answer": "call",
+      "bigBlind": 2400,
+      "button": 1,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 84000,
+      "sceneHoleCards": {
+        "HoleCard1": "Kd",
+        "HoleCard2": "Ad"
+      },
+      "originalPot": 12000,
+      "pot": 16000,
+      "toGo": 6400,
+      "street": "preflop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 223200,
+          "playerType": "LA"
+        },
+        {
+          "action": "raise",
+          "amount": 4000,
+          "position": 6,
+          "villainStack": 288800,
+          "playerType": "LA"
+        }
+      ],
+      "answerAmount": 6400
+    },
+    {
+      "answer": "call",
+      "bigBlind": 2400,
+      "button": 7,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 21600,
+      "heroStack": 136800,
+      "sceneHoleCards": {
+        "HoleCard1": "Kh",
+        "HoleCard2": "Ad"
+      },
+      "originalPot": 86400,
+      "pot": 108000,
+      "toGo": 21600,
+      "street": "turn",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 6,
+          "villainStack": 201600,
+          "playerType": "LA"
+        },
+        {
+          "action": "bet",
+          "amount": 21600,
+          "position": 8,
+          "villainStack": 117600,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 7,
+      "connectText": "large draw, one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Jd",
+          "flop 2": "2d",
+          "flop 3": "Ac",
+          "turn": "4d",
+          "river": "5c"
+        },
+        "holeCards": {
+          "HoleCard1": "Kh",
+          "HoleCard2": "Ad"
+        }
+      },
+      "answerAmount": 21600
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 2400,
+      "button": 9,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 24000,
+      "heroStack": 158400,
+      "sceneHoleCards": {
+        "HoleCard1": "8h",
+        "HoleCard2": "Kh"
+      },
+      "originalPot": 52800,
+      "pot": 52800,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 127200,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 6,
+      "boardConnect": 2,
+      "connectText": "two card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Jh",
+          "flop 2": "6h",
+          "flop 3": "Qd",
+          "turn": "5h",
+          "river": "3c"
+        },
+        "holeCards": {
+          "HoleCard1": "8h",
+          "HoleCard2": "Kh"
+        }
+      },
+      "answerAmount": 26400
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 3000,
+      "button": 3,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 192000,
+      "sceneHoleCards": {
+        "HoleCard1": "9s",
+        "HoleCard2": "8d"
+      },
+      "originalPot": 18000,
+      "pot": 18000,
+      "toGo": 3000,
+      "street": "preflop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 162000,
+          "playerType": "TA"
+        }
+      ],
+      "answerAmount": 0
+    },
+    {
+      "answer": "check",
+      "bigBlind": 3000,
+      "button": 4,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 27000,
+      "heroStack": 117000,
+      "sceneHoleCards": {
+        "HoleCard1": "9d",
+        "HoleCard2": "Qd"
+      },
+      "originalPot": 66000,
+      "pot": 66000,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "check",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 174000,
+          "playerType": "Maniac"
+        }
+      ],
+      "rank": 3,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Kh",
+          "flop 2": "3c",
+          "flop 3": "Qh",
+          "turn": "3h",
+          "river": "5c"
+        },
+        "holeCards": {
+          "HoleCard1": "9d",
+          "HoleCard2": "Qd"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 3000,
+      "button": 7,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 27000,
+      "heroStack": 150000,
+      "sceneHoleCards": {
+        "HoleCard1": "Qs",
+        "HoleCard2": "Td"
+      },
+      "originalPot": 72000,
+      "pot": 72000,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 192000,
+          "playerType": "LA"
+        }
+      ],
+      "rank": 3,
+      "boardConnect": 7,
+      "connectText": "large draw, one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Jd",
+          "flop 2": "6s",
+          "flop 3": "6d",
+          "turn": "Qd",
+          "river": "2c"
+        },
+        "holeCards": {
+          "HoleCard1": "Qs",
+          "HoleCard2": "Td"
+        }
+      },
+      "answerAmount": 36000
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 3000,
+      "button": 4,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 6000,
+      "heroStack": 183000,
+      "sceneHoleCards": {
+        "HoleCard1": "Kh",
+        "HoleCard2": "Td"
+      },
+      "originalPot": 48000,
+      "pot": 96000,
+      "toGo": 24000,
+      "street": "flop",
+      "numVillains": 3,
+      "villains": [
+        {
+          "action": "call",
+          "amount": 24000,
+          "position": 8,
+          "villainStack": 159000,
+          "playerType": "LA"
+        },
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 63000,
+          "playerType": "LA"
+        },
+        {
+          "action": "bet",
+          "amount": 24000,
+          "position": 6,
+          "villainStack": 324000,
+          "playerType": "Maniac"
+        }
+      ],
+      "rank": 1,
+      "boardConnect": 12,
+      "connectText": "one over card, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "4d",
+          "flop 2": "5d",
+          "flop 3": "Jh",
+          "turn": "7c",
+          "river": "Ts"
+        },
+        "holeCards": {
+          "HoleCard1": "Kh",
+          "HoleCard2": "Td"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 3000,
+      "button": 4,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 6000,
+      "heroStack": 285000,
+      "sceneHoleCards": {
+        "HoleCard1": "Kh",
+        "HoleCard2": "Qc"
+      },
+      "originalPot": 18000,
+      "pot": 36000,
+      "toGo": 18000,
+      "street": "flop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 18000,
+          "position": 6,
+          "villainStack": 69000,
+          "playerType": "Maniac"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 10,
+      "connectText": "two over cards, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "3c",
+          "flop 2": "5h",
+          "flop 3": "5s",
+          "turn": "Kc",
+          "river": "7c"
+        },
+        "holeCards": {
+          "HoleCard1": "Kh",
+          "HoleCard2": "Qc"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "check",
+      "bigBlind": 4000,
+      "button": 6,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 12000,
+      "heroStack": 200000,
+      "sceneHoleCards": {
+        "HoleCard1": "As",
+        "HoleCard2": "7h"
+      },
+      "originalPot": 24000,
+      "pot": 24000,
+      "toGo": 0,
+      "street": "flop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "",
+          "amount": 0,
+          "position": 3,
+          "villainStack": 240000,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 1,
+      "boardConnect": 12,
+      "connectText": "one over card, zero card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "9h",
+          "flop 2": "3h",
+          "flop 3": "4c",
+          "turn": "9d",
+          "river": "7s"
+        },
+        "holeCards": {
+          "HoleCard1": "As",
+          "HoleCard2": "7h"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "check",
+      "bigBlind": 4000,
+      "button": 6,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 36000,
+      "heroStack": 224000,
+      "sceneHoleCards": {
+        "HoleCard1": "Ks",
+        "HoleCard2": "8d"
+      },
+      "originalPot": 88000,
+      "pot": 88000,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "check",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 104000,
+          "playerType": "TP"
+        }
+      ],
+      "rank": 2,
+      "boardConnect": 9,
+      "connectText": "one card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Ah",
+          "flop 2": "Kh",
+          "flop 3": "Td",
+          "turn": "5c",
+          "river": "2d"
+        },
+        "holeCards": {
+          "HoleCard1": "Ks",
+          "HoleCard2": "8d"
+        }
+      },
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 4000,
+      "button": 5,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 84000,
+      "heroStack": 276000,
+      "sceneHoleCards": {
+        "HoleCard1": "7s",
+        "HoleCard2": "Ac"
+      },
+      "originalPot": 216000,
+      "pot": 432000,
+      "toGo": 108000,
+      "street": "river",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "bet",
+          "amount": 108000,
+          "position": 6,
+          "villainStack": 372000,
+          "playerType": "Maniac"
+        },
+        {
+          "action": "call",
+          "amount": 108000,
+          "position": 8,
+          "villainStack": 156000,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 5,
+      "boardConnect": 6,
+      "connectText": "one card board connection with over card",
+      "hand": {
+        "handBoard": {
+          "flop 1": "5d",
+          "flop 2": "9d",
+          "flop 3": "Js",
+          "turn": "Th",
+          "river": "8d"
+        },
+        "holeCards": {
+          "HoleCard1": "7s",
+          "HoleCard2": "Ac"
+        }
+      },
+      "answerAmount": 216000
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 4000,
+      "button": 9,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 2000,
+      "heroStack": 156000,
+      "sceneHoleCards": {
+        "HoleCard1": "7s",
+        "HoleCard2": "As"
+      },
+      "originalPot": 28000,
+      "pot": 32000,
+      "toGo": 4000,
+      "street": "preflop",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "call",
+          "amount": 4000,
+          "position": 3,
+          "villainStack": 312000,
+          "playerType": "TA"
+        }
+      ],
+      "answerAmount": 12000
+    },
+    {
+      "answer": "fold",
+      "bigBlind": 4000,
+      "button": 1,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 0,
+      "heroStack": 164000,
+      "sceneHoleCards": {
+        "HoleCard1": "5s",
+        "HoleCard2": "Kd"
+      },
+      "originalPot": 16000,
+      "pot": 24000,
+      "toGo": 8000,
+      "street": "preflop",
+      "numVillains": 2,
+      "villains": [
+        {
+          "action": "call",
+          "amount": 4000,
+          "position": 6,
+          "villainStack": 404000,
+          "playerType": "Maniac"
+        },
+        {
+          "action": "raise",
+          "amount": 4000,
+          "position": 8,
+          "villainStack": 268000,
+          "playerType": "TA"
+        }
+      ],
+      "answerAmount": 0
+    },
+    {
+      "answer": "bet",
+      "bigBlind": 5000,
+      "button": 3,
+      "duration": 60,
+      "heroAmount": 0,
+      "heroCommit": 55000,
+      "heroStack": 125000,
+      "sceneHoleCards": {
+        "HoleCard1": "Ad",
+        "HoleCard2": "6c"
+      },
+      "originalPot": 110000,
+      "pot": 110000,
+      "toGo": 0,
+      "street": "turn",
+      "numVillains": 1,
+      "villains": [
+        {
+          "action": "check",
+          "amount": 0,
+          "position": 8,
+          "villainStack": 220000,
+          "playerType": "TA"
+        }
+      ],
+      "rank": 7,
+      "boardConnect": 2,
+      "connectText": "two card board connection",
+      "hand": {
+        "handBoard": {
+          "flop 1": "Ac",
+          "flop 2": "6s",
+          "flop 3": "Qh",
+          "turn": "Ah",
+          "river": "Tc"
+        },
+        "holeCards": {
+          "HoleCard1": "Ad",
+          "HoleCard2": "6c"
+        }
+      },
+      "answerAmount": 55000
+    }
+  ]
+}

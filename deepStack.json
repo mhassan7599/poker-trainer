@@ -1,0 +1,212 @@
+{
+  "title": "Deep Stack Scenarios",
+  "description": "Advanced scenarios for deep stack play (100BB+)",
+  "difficulty": "Advanced",
+  "scenarioScenes": [
+    {
+      "id": 1,
+      "hand": {
+        "holeCards": {
+          "HoleCard1": "A♠",
+          "HoleCard2": "K♠"
+        },
+        "handBoard": {
+          "flop 1": "K♥",
+          "flop 2": "10♠",
+          "flop 3": "2♦",
+          "turn": "7♣",
+          "river": ""
+        }
+      },
+      "street": "Turn",
+      "pot": 9600,
+      "bigBlind": 800,
+      "toGo": 0,
+      "heroStack": 17600,
+      "heroCommit": 2400,
+      "button": 5,
+      "heroPosition": 7,
+      "villains": [
+        {
+          "position": 5,
+          "playerType": "TA",
+          "villainStack": 45600,
+          "action": "check",
+          "amount": 0
+        }
+      ],
+      "answer": "pot",
+      "answerAmount": 9600,
+      "explanation": "With top pair top kicker and a flush draw, betting pot size on the turn is the optimal play. This builds the pot with your strong hand while giving draws incorrect odds to call.",
+      "stats": {
+        "equity": "67%",
+        "ev": "+4800",
+        "foldEquity": "35%"
+      }
+    },
+    {
+      "id": 2,
+      "hand": {
+        "holeCards": {
+          "HoleCard1": "J♥",
+          "HoleCard2": "J♦"
+        },
+        "handBoard": {
+          "flop 1": "A♠",
+          "flop 2": "K♠",
+          "flop 3": "2♦",
+          "turn": "",
+          "river": ""
+        }
+      },
+      "street": "Flop",
+      "pot": 6400,
+      "bigBlind": 800,
+      "toGo": 3200,
+      "heroStack": 24000,
+      "heroCommit": 1600,
+      "button": 1,
+      "heroPosition": 3,
+      "villains": [
+        {
+          "position": 1,
+          "playerType": "LP",
+          "villainStack": 32000,
+          "action": "bet",
+          "amount": 3200
+        }
+      ],
+      "answer": "fold",
+      "answerAmount": 0,
+      "explanation": "Pocket jacks are significantly behind on this Ace-King high board. The button player's betting range contains many Ax and Kx hands that dominate you. Folding is the correct play to avoid losing more chips.",
+      "stats": {
+        "equity": "22%",
+        "ev": "-1800",
+        "foldEquity": "5%"
+      }
+    },
+    {
+      "id": 3,
+      "hand": {
+        "holeCards": {
+          "HoleCard1": "Q♣",
+          "HoleCard2": "Q♥"
+        },
+        "handBoard": {
+          "flop 1": "8♠",
+          "flop 2": "7♠",
+          "flop 3": "2♣",
+          "turn": "",
+          "river": ""
+        }
+      },
+      "street": "Flop",
+      "pot": 4800,
+      "bigBlind": 800,
+      "toGo": 0,
+      "heroStack": 32000,
+      "heroCommit": 1600,
+      "button": 8,
+      "heroPosition": 2,
+      "villains": [
+        {
+          "position": 8,
+          "playerType": "NIT",
+          "villainStack": 28000,
+          "action": "check",
+          "amount": 0
+        }
+      ],
+      "answer": "3bb",
+      "answerAmount": 2400,
+      "explanation": "With an overpair on a relatively safe board, a small bet of 3BB is optimal. This protects your hand while keeping the pot small against a tight player who likely has a weak range. A larger bet might cause them to fold too often, reducing your value.",
+      "stats": {
+        "equity": "82%",
+        "ev": "+2100",
+        "foldEquity": "60%"
+      }
+    },
+    {
+      "id": 4,
+      "hand": {
+        "holeCards": {
+          "HoleCard1": "A♦",
+          "HoleCard2": "J♦"
+        },
+        "handBoard": {
+          "flop 1": "K♦",
+          "flop 2": "Q♦",
+          "flop 3": "4♠",
+          "turn": "9♣",
+          "river": "2♥"
+        }
+      },
+      "street": "River",
+      "pot": 24000,
+      "bigBlind": 800,
+      "toGo": 12000,
+      "heroStack": 36000,
+      "heroCommit": 6000,
+      "button": 3,
+      "heroPosition": 5,
+      "villains": [
+        {
+          "position": 3,
+          "playerType": "LAG",
+          "villainStack": 42000,
+          "action": "bet",
+          "amount": 12000
+        }
+      ],
+      "answer": "call",
+      "answerAmount": 12000,
+      "explanation": "You've made the nut flush on the river. Against a loose-aggressive player who could be bluffing with missed straight draws or betting for value with weaker flushes, calling is the optimal play. Raising might cause them to fold all but their strongest hands.",
+      "stats": {
+        "equity": "95%",
+        "ev": "+11400",
+        "foldEquity": "0%"
+      }
+    },
+    {
+      "id": 5,
+      "hand": {
+        "holeCards": {
+          "HoleCard1": "5♠",
+          "HoleCard2": "5♣"
+        },
+        "handBoard": {
+          "flop 1": "",
+          "flop 2": "",
+          "flop 3": "",
+          "turn": "",
+          "river": ""
+        }
+      },
+      "street": "Flop",
+      "pot": 4800,
+      "bigBlind": 800,
+      "toGo": 0,
+      "heroStack": 32000,
+      "heroCommit": 1600,
+      "button": 8,
+      "heroPosition": 2,
+      "villains": [
+        {
+          "position": 8,
+          "playerType": "NIT",
+          "villainStack": 28000,
+          "action": "check",
+          "amount": 0
+        }
+      ],
+      "answer": "3bb",
+      "answerAmount": 2400,
+      "explanation": "With an overpair on a relatively safe board, a small bet of 3BB is optimal. This protects your hand while keeping the pot small against a tight player who likely has a weak range. A larger bet might cause them to fold too often, reducing your value.",
+      "stats": {
+        "equity": "82%",
+        "ev": "+2100",
+        "foldEquity": "60%"
+      }
+    }
+  ]
+} 
