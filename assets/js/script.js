@@ -198,7 +198,7 @@ function handleResponsiveLayout() {
     // Apply square table for mobile in portrait mode
     if (width <= 480 && isPortrait) {
         pokerTable.style.height = `${width}px`;
-        pokerTable.style.maxHeight = '480px';
+        pokerTable.style.maxHeight = '560px';
         pokerTable.style.borderRadius = '20px';
     } else {
         pokerTable.style.height = '';
@@ -275,10 +275,10 @@ function adjustPlayerPositions(width, isPortrait) {
             if (player.classList.contains('player-top')) {
                 player.style.top = '0%';
             } else if (player.classList.contains('player-right')) {
-                player.style.right = '5%';
+                player.style.right = '2%';
                 player.style.top = '40%';
             } else if (player.classList.contains('player-left')) {
-                player.style.left = '5%';
+                player.style.left = '2%';
                 player.style.top = '40%';
             }
         }
@@ -897,24 +897,14 @@ const sampleScenarioData = {
 
 // Function to initialize card style switcher
 function initCardStyleSwitcher() {
-    // Create the toggle button if it doesn't exist
-    if (!document.getElementById('color-toggle-btn')) {
-        const toggleBtn = document.createElement('button');
-        toggleBtn.id = 'color-toggle-btn';
-        toggleBtn.className = 'color-toggle-btn';
-        toggleBtn.textContent = '4 Color Toggle';
-        
-        // Add the button to a more visible location
-        const container = document.querySelector('.container');
-        const pokerTable = document.querySelector('.poker-table');
-        container.insertBefore(toggleBtn, pokerTable.nextSibling);
-        
-        // Add event listener for the toggle button
-        toggleBtn.addEventListener('click', toggleCardColors);
-    }
-    
     // Initialize with two-color scheme by default
     document.querySelector('.poker-table').classList.add('two-color');
+    
+    // Add event listener for the toggle button
+    const toggleBtn = document.getElementById('color-toggle-btn');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', toggleCardColors);
+    }
     
     // Apply initial card styling
     updateExistingCards();
@@ -929,8 +919,7 @@ function toggleCardColors() {
         // Switch to four-color
         pokerTable.classList.remove('two-color');
         pokerTable.classList.add('four-color');
-        toggleBtn.classList.add('active');
-        toggleBtn.textContent = '2 Color Toggle';
+        toggleBtn.textContent = '4 Color';
 
         const cardStyleSelect = document.getElementById('card-style');
         if (cardStyleSelect) {
@@ -940,8 +929,7 @@ function toggleCardColors() {
         // Switch to two-color
         pokerTable.classList.remove('four-color');
         pokerTable.classList.add('two-color');
-        toggleBtn.classList.remove('active');
-        toggleBtn.textContent = '4 Color Toggle';
+        toggleBtn.textContent = '2 Color';
 
         const cardStyleSelect = document.getElementById('card-style');
         if (cardStyleSelect) {

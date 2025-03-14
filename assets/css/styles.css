@@ -151,6 +151,10 @@ body {
   z-index: 10;
 }
 
+.pot-info div {
+  font-size: 14px;
+}
+
 .player {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
@@ -455,20 +459,29 @@ body {
     min-width: 90px;
   }
 
+  .pot-info div {
+    font-size: 14px;
+  }
+
+  .pot-info {
+    top: 63%;
+    width: 180px;
+  }
+
   .player {
     width: 130px;
   }
 
   .player-top {
-    top: 8%;
+    top: 1%;
   }
   
   .player-right {
-    right: 8%;
+    right: 3%;
   }
   
   .player-left {
-    left: 8%;
+    left: 3%;
   }
 }
 
@@ -490,7 +503,7 @@ body {
   }
   
   .pot-info {
-    top: 50%;
+    top: 60%;
     width: 180px;
     font-size: 14px;
   }
@@ -551,7 +564,7 @@ body {
   }
   
   .player-top {
-    top: 5%;
+    top: 1%;
   }
 }
 
@@ -567,7 +580,7 @@ body {
   }
   
   .board-area {
-    top: 30%;
+    top: 38%;
     max-width: 260px;
     gap: 4px;
   }
@@ -657,7 +670,7 @@ body {
   }
   
   .board-area {
-    top: 30%;
+    top: 33%;
     max-width: 220px;
     gap: 3px;
   }
@@ -666,6 +679,10 @@ body {
     width: 150px;
     font-size: 11px;
     padding: 8px;
+  }
+
+  .pot-info div {
+    font-size: 12px;
   }
   
   .player {
@@ -749,6 +766,10 @@ body {
     width: 120px;
     font-size: 10px;
     padding: 5px;
+  }
+
+  .pot-info div {
+    font-size: 10px;
   }
 
   .player {
