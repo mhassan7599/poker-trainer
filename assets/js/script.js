@@ -383,6 +383,36 @@ function handleAction(action) {
     const currentScene = getCurrentScene();
     let isCorrect = action === currentScene.answer;
     
+    // Calculate new stack and prior based on action
+    let stackChange = 0;
+    let newPrior = currentScene.heroCommit;
+    
+    if (action === 'check' || action === 'fold') {
+        // No change to stack or prior
+    } else if (action === '3bb') {
+        stackChange = currentScene.bigBlind * 3;
+        newPrior = currentScene.heroCommit + stackChange;
+    } else if (action === '5bb') {
+        stackChange = currentScene.bigBlind * 5;
+        newPrior = currentScene.heroCommit + stackChange;
+    } else if (action === 'halfpot') {
+        stackChange = Math.floor(currentScene.pot / 2);
+        newPrior = currentScene.heroCommit + stackChange;
+    } else if (action === 'pot') {
+        stackChange = currentScene.pot;
+        newPrior = currentScene.heroCommit + stackChange;
+    } else if (action === 'doublepot') {
+        stackChange = currentScene.pot * 2;
+        newPrior = currentScene.heroCommit + stackChange;
+    } else if (action === 'shove') {
+        stackChange = currentScene.heroStack;
+        newPrior = currentScene.heroCommit + stackChange;
+    }
+
+    // Update hero info with new values
+    const newStack = currentScene.heroStack - stackChange;
+    updateHeroInfo(newStack, newPrior);
+    
     // Pause the timer
     clearInterval(timerInterval);
     isPaused = true;
@@ -1005,4 +1035,18 @@ function createCard(cardInfo, container, delay = 0) {
     adjustCardSizes(window.innerWidth);
     
     return card;
+}
+
+// Add this function to update hero info
+function updateHeroInfo(stack, prior) {
+    const heroStack = document.getElementById('hero-stack');
+    const heroCommit = document.getElementById('hero-commit');
+    
+    if (heroStack) {
+        heroStack.textContent = stack.toLocaleString();
+    }
+    
+    if (heroCommit) {
+        heroCommit.textContent = prior.toLocaleString();
+    }
 }

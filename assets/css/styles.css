@@ -184,8 +184,8 @@ body {
 }
 
 .player-bottom {
-  bottom: 10%;
-  left: 50%;
+  bottom: -2%;
+  left: 36%;
   transform: translateX(-50%);
 }
 
@@ -300,14 +300,26 @@ body {
 }
 
 .hero-info {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 12px 20px;
   border-radius: 10px;
   text-align: center;
-  margin-bottom: 15px;
   width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 auto;
+}
+
+.stack-info, .commit-info {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.stack-info span, .commit-info span {
+  color: #4caf50;
 }
 
 .action-buttons {
@@ -317,6 +329,7 @@ body {
   justify-content: center;
   width: 100%;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .action-button {
@@ -724,20 +737,17 @@ body {
   }
   
   .hero-info {
-    font-size: 11px;
-    padding: 8px;
+    padding: 8px 15px;
+    font-size: 14px;
   }
   
-  .action-button {
-    padding: 7px 10px;
-    font-size: 11px;
-    border-radius: 20px;
+  .stack-info, .commit-info {
+    font-size: 14px;
   }
-
-  .result-message {
-    font-size: 18px;
-    padding: 15px;
-    min-width: 250px;
+  
+  .error-message {
+    font-size: 14px;
+    padding: 10px 20px;
   }
   
   .player-top {
@@ -757,7 +767,7 @@ body {
   }
   
   .board-area {
-    top: 25%;
+    top: 40%;
     max-width: 180px;
     gap: 2px;
   }
@@ -795,8 +805,8 @@ body {
 
   .card-suit {
     font-size: 10px;
-    bottom: 2px;
-    right: 2px;
+    bottom: 6px;
+    right: 4px;
   }
 
   .card-center-suit {
@@ -1258,4 +1268,35 @@ body {
 
 .card-animation {
   animation: dealCard 0.3s ease-out forwards;
+}
+
+/* Add error message styling */
+.error-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(244, 67, 54, 0.9);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    z-index: 1000;
+    animation: fadeInOut 2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, -20px); }
+    15% { opacity: 1; transform: translate(-50%, 0); }
+    85% { opacity: 1; transform: translate(-50%, 0); }
+    100% { opacity: 0; transform: translate(-50%, -20px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .error-message {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
 }
