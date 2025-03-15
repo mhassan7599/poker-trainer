@@ -17,7 +17,6 @@
         </div>
         <div class="timer-display">Time: <span id="timer">60</span>s</div>
         <div>
-          <button id="pause-btn" class="action-button">Pause</button>
           <button id="practice-errors-btn" class="action-button hidden">
             Practice Errors
           </button>
@@ -59,9 +58,9 @@
         </div>
 
         <!-- Dealer button and blinds -->
-        <!-- <div class="dealer-button">DEALER</div>
-            <div class="blinds small-blind">SB</div>
-            <div class="blinds big-blind">BB</div> -->
+        <div class="dealer-button">DEALER</div>
+        <div class="blinds small-blind">SB</div>
+        <div class="blinds big-blind">BB</div>
 
         <!-- Players -->
         <div class="players-container" id="players-container">
@@ -110,14 +109,15 @@
 
       <!-- Action buttons -->
       <div class="action-buttons">
+        <button class="action-button" data-action="fold">Fold</button>
+        <button class="action-button" data-action="call">Call</button>
         <button class="action-button" data-action="check">Check</button>
         <button class="action-button" data-action="3bb">3 BB</button>
-        <button class="action-button" data-action="halfpot">1/2 Pot</button>
-        <button class="action-button" data-action="doublepot">2x Pot</button>
         <button class="action-button" data-action="5bb">5 BB</button>
+        <button class="action-button" data-action="halfpot">1/2 Pot</button>
         <button class="action-button" data-action="pot">Pot</button>
+        <button class="action-button" data-action="doublepot">2x Pot</button>
         <button class="action-button" data-action="shove">Shove</button>
-        <button class="action-button" id="color-toggle-btn">2 Color</button>
       </div>
 
       <div class="settings-panel">

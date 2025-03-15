@@ -417,9 +417,6 @@ function handleAction(action) {
     clearInterval(timerInterval);
     isPaused = true;
     
-    // Create detailed feedback page
-    showDetailedFeedback(action, currentScene, isCorrect);
-    
     // Update score
     if (isCorrect) {
         score++;
@@ -435,6 +432,9 @@ function handleAction(action) {
     if (errorScenes.length > 0) {
         document.getElementById('practice-errors-btn').classList.remove('hidden');
     }
+    
+    // Move directly to next scene without showing feedback
+    nextScene();
 }
 
 // Function to get current scene
@@ -444,142 +444,7 @@ function getCurrentScene() {
 
 // Function to show detailed feedback page
 function showDetailedFeedback(playerAction, scene, isCorrect) {
-    // Create overlay for detailed feedback
-    const overlay = document.createElement('div');
-    overlay.className = 'feedback-overlay';
-    
-    // Create feedback content
-    const feedbackContent = document.createElement('div');
-    feedbackContent.className = 'feedback-content';
-    
-    // Add header with result
-    const header = document.createElement('div');
-    header.className = `feedback-header ${isCorrect ? 'correct' : 'incorrect'}`;
-    header.innerHTML = isCorrect ? 
-        '<h2>Correct Decision!</h2>' : 
-        '<h2>Incorrect Decision</h2>';
-    feedbackContent.appendChild(header);
-    
-    // Add hand information
-    const handInfo = document.createElement('div');
-    handInfo.className = 'feedback-hand-info';
-    
-    // Format hole cards
-    const holeCards = `${scene.hand.holeCards.HoleCard1} ${scene.hand.holeCards.HoleCard2}`;
-    
-    // Format board cards based on street
-    let boardCards = '';
-    const board = scene.hand.handBoard;
-    const street = scene.street.toLowerCase();
-    
-    if (street !== 'preflop') {
-        boardCards = `${board["flop 1"] || ''} ${board["flop 2"] || ''} ${board["flop 3"] || ''}`;
-        
-        if (street === 'turn' || street === 'river') {
-            boardCards += ` ${board.turn || ''}`;
-        }
-        
-        if (street === 'river') {
-            boardCards += ` ${board.river || ''}`;
-        }
-    }
-    
-    handInfo.innerHTML = `
-        <div class="feedback-section">
-            <h3>Your Hand</h3>
-            <div class="feedback-cards">${holeCards}</div>
-            ${boardCards ? `<h3>Board</h3><div class="feedback-cards">${boardCards}</div>` : ''}
-            <h3>Position</h3>
-            <div>Button: ${getPositionName(scene.button)}</div>
-            <div>Hero: ${getPositionName(scene.heroPosition)}</div>
-        </div>
-    `;
-    feedbackContent.appendChild(handInfo);
-    
-    // Add action information
-    const actionInfo = document.createElement('div');
-    actionInfo.className = 'feedback-action-info';
-    
-    actionInfo.innerHTML = `
-        <div class="feedback-section">
-            <h3>Your Action</h3>
-            <div class="action-comparison ${isCorrect ? 'correct' : 'incorrect'}">
-                <div>You chose: <strong>${playerAction.toUpperCase()}</strong></div>
-                ${!isCorrect ? `<div>Correct action: <strong>${scene.answer.toUpperCase()}</strong></div>` : ''}
-                ${scene.answerAmount > 0 ? `<div>Amount: ${scene.answerAmount.toLocaleString()}</div>` : ''}
-            </div>
-        </div>
-    `;
-    feedbackContent.appendChild(actionInfo);
-    
-    // Add explanation if available
-    if (scene.explanation) {
-        const explanation = document.createElement('div');
-        explanation.className = 'feedback-explanation';
-        explanation.innerHTML = `
-            <div class="feedback-section">
-                <h3>Explanation</h3>
-                <p>${scene.explanation}</p>
-            </div>
-        `;
-        feedbackContent.appendChild(explanation);
-    }
-    
-    // Add statistics if available
-    if (scene.stats) {
-        const stats = document.createElement('div');
-        stats.className = 'feedback-stats';
-        stats.innerHTML = `
-            <div class="feedback-section">
-                <h3>Statistics</h3>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-label">Equity</div>
-                        <div class="stat-value">${scene.stats.equity || 'N/A'}</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-label">EV</div>
-                        <div class="stat-value">${scene.stats.ev || 'N/A'}</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-label">Fold Equity</div>
-                        <div class="stat-value">${scene.stats.foldEquity || 'N/A'}</div>
-                    </div>
-                </div>
-            </div>
-        `;
-        feedbackContent.appendChild(stats);
-    }
-    
-    // Add navigation buttons
-    const navButtons = document.createElement('div');
-    navButtons.className = 'feedback-nav-buttons';
-    navButtons.innerHTML = `
-        <button id="prev-scene-btn" class="action-button" ${currentSceneIndex === 0 ? 'disabled' : ''}>Previous</button>
-        <button id="next-scene-btn" class="action-button">Next</button>
-    `;
-    feedbackContent.appendChild(navButtons);
-    
-    // Add content to overlay
-    overlay.appendChild(feedbackContent);
-    
-    // Add overlay to body
-    document.body.appendChild(overlay);
-    
-    // Add event listeners to buttons
-    document.getElementById('next-scene-btn').addEventListener('click', function() {
-        document.body.removeChild(overlay);
-        nextScene();
-    });
-    
-    document.getElementById('prev-scene-btn').addEventListener('click', function() {
-        if (currentSceneIndex > 0) {
-            document.body.removeChild(overlay);
-            currentSceneIndex--;
-            populateScene(currentSceneIndex);
-            startTimer();
-        }
-    });
+    // This function is now empty - no feedback modal will be shown
 }
 
 // Function to get position name from position number
